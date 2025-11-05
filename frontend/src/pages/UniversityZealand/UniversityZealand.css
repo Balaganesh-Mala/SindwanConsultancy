@@ -1,0 +1,68 @@
+.university-zealand {
+  background-color: #f8fbff;
+  color: #003366;
+  padding: 60px 20px;
+  line-height: 1.8;
+  font-family: "Poppins", sans-serif;
+}
+
+.university-zealand .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.university-zealand h2 {
+  color: #004aad;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  border-bottom: 3px solid #004aad;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.university-zealand h3 {
+  color: #004aad;
+  margin-top: 30px;
+  font-size: 1.4rem;
+}
+
+.university-zealand p {
+  margin: 10px 0;
+  color: #003366;
+}
+
+.university-zealand ul {
+  list-style: disc;
+  margin-left: 25px;
+  color: #003366;
+}
+
+.university-zealand table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 74, 173, 0.1);
+}
+
+.university-zealand th,
+.university-zealand td {
+  border: 1px solid #cce0ff;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.university-zealand th {
+  background-color: #004aad;
+  color: #fff;
+  font-weight: 600;
+}
+
+.university-zealand tr:nth-child(even) {
+  background-color: #f0f6ff;
+}
+
+.university-zealand tr:hover {
+  background-color: #e6f0ff;
+}

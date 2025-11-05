@@ -1,0 +1,136 @@
+.counsellor-container {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  padding: 0;
+  margin: 0;
+}
+
+/* Banner */
+.counsellor-banner {
+  background: url("https://ik.imagekit.io/izqq5ffwt/businesswoman-outside.jpg") center/cover no-repeat;
+  height: 350px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.banner-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 0px 50px 50px 50px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.banner-overlay p {
+  font-size: 1.1rem;
+}
+
+/* Why Section */
+.why-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.why-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+}
+
+.why-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.why-card h3 {
+  padding: 15px;
+  font-size: 1.1rem;
+}
+
+/* Help Section */
+.help-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fafafa;
+}
+
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.help-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding-bottom: 20px;
+}
+
+.help-card img {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+.help-card h3 {
+  margin: 15px 0 10px;
+  font-size: 1.1rem;
+}
+
+.help-card p {
+  font-size: 0.9rem;
+  padding: 0 15px;
+}
+
+/* Info Section */
+.info-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.info-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.info-section ul {
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.info-section li {
+  margin: 10px 0;
+  font-size: 0.95rem;
+}
