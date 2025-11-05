@@ -42,7 +42,7 @@ const WhoWeAre = () => {
           matching algorithm — helping students get the highest amount of
           scholarships and helping universities find special talent.
         </p>
-        <button className="bg-orange-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-orange-600 transition mb-12">
+        <button className="bg-blue-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-600 transition mb-12">
           ABOUT US
         </button>
 

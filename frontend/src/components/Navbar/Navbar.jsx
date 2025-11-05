@@ -33,7 +33,7 @@ const Navbar = () => {
             className="w-10 h-10 md:w-12 md:h-12 object-contain"
           />
           <h1
-            className={`text-2xl font-bold transition-colors duration-300 ${
+            className={`text-1xl font-bold transition-colors duration-300 ${
               scrolled ? "text-blue-700" : "text-white"
             }`}
           >

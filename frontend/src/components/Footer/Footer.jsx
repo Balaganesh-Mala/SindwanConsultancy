@@ -11,7 +11,7 @@ const Footer = () => {
             alt="Logo"
             className="footer-logo"
           />
-          <p className="footer-company">Edmium</p>
+          <p className="footer-company">Sindwan Consultancy</p>
           <p>Flat No:2, Siripuram Towers,<br /> Siripuram, Visakhapatnam,<br /> Andhra Pradesh – 530003</p>
           <div className="footer-social">
             <FaFacebookF className="icon" />
@@ -36,19 +36,24 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Universities</h3>
           <ul>
-            <li>USA</li>
-            <li>Australia</li>
-            <li>Canada</li>
-            <li>UK</li>
-            <li>Germany</li>
-            <li>New Zealand</li>
+            <a href="/usa"><li>USA</li></a>
+            
+            <a href="/australia"><li>Australia</li></a>
+            <a href="/canada"><li>Canada</li></a>
+            <a href="/uk"><li>UK</li></a>
+            <a href="/germany"><li>Germany</li></a>
+            <a href="/new-zealand"><li>New Zealand</li></a>
+            
+            
+            
+            
           </ul>
         </div>
 
         <div className="footer-section">
           <h3>Quicklinks</h3>
           <ul>
-            <li>How it Works</li>
+            <a href="/how"><li>How it Works</li></a>
             <li>About Us</li>
             <li>Advising</li>
             <li>Terms & Conditions</li>
@@ -75,16 +80,16 @@ const Footer = () => {
         </div>
         <div className="contact-item">
           <FaPhoneAlt className="contact-icon" />
-          <p>+91 9392932943</p>
+          <p>+91 987654321</p>
         </div>
         <div className="contact-item">
           <FaEnvelope className="contact-icon" />
-          <p>info@edmium.com</p>
+          <p>info@sindwanconsultancy.com</p>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>© 2025 Edmium. All rights reserved.</p>
+        <p>© 2025 Sindwan Consultancy. All rights reserved.</p>
       </div>
     </footer>
   );
