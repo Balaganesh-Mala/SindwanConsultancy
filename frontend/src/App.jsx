@@ -8,9 +8,9 @@ import AdvancedTools from "./components/AdvancedTools/AdvancedTools.jsx";
 import HelpingSection from "./components/HelpingSection/HelpingSection.jsx";
 import WhoWeAre from "./components/WhoWeAre/WhoWeAre.jsx";
 
-import Mentor from "./pages/Mentor/Mentor.jsx"
-import Partner from "./pages/Partner/Partner.jsx"
-import Counsellor from "./pages/Counsellor/Counsellor.jsx"
+import Mentor from "./pages/Mentor/Mentor.jsx";
+import Partner from "./pages/Partner/Partner.jsx";
+import Counsellor from "./pages/Counsellor/Counsellor.jsx";
 
 import UsaUniversities from "./pages/UsaUniversities/UsaUniversities.jsx";
 import UniversityAustralia from "./pages/UniversityAustralia/UniversityAustralia.jsx";
@@ -29,12 +29,11 @@ const Home = () => {
     <>
       <Navbar />
       <Hero />
-      <AdvancedTools/>
-      <HelpingSection/>
-      <WhoWeAre/>
-      
+      <AdvancedTools />
+      <HelpingSection />
+      <WhoWeAre />
       <Footer />
-      <WhatsAppButton/>
+      <WhatsAppButton />
     </>
   );
 };
@@ -47,16 +46,16 @@ const App = () => {
         <Route path="/mentor" element={<Mentor />} />
         <Route path="/partner" element={<Partner />} />
         <Route path="/counsellor" element={<Counsellor />} />
-        <Route path="/usa" element={<UsaUniversities/>}/>
-        <Route path="/australia" element={<UniversityAustralia/>}/>
-        <Route path="/canada" element={<CanadaUniversities/>}/>
-        <Route path="/germany" element={<UniversityGermany/>}/>\
-        <Route path="/uk" element={<UniversityUK/>}/>
-        <Route path="/new-zealand" element={<UniversityZealand/>}/>
-        <Route path="/france" element={<UniversityFrance/>}/>
-        <Route path="/sweden" element={<UniversitySweden/>}/>
-        <Route path="/ireland" element={<UniversityIreland/>}/>
-        <Route path="/how" element={<HowItWorks/>}/>
+        <Route path="/usa" element={<UsaUniversities />} />
+        <Route path="/australia" element={<UniversityAustralia />} />
+        <Route path="/canada" element={<CanadaUniversities />} />
+        <Route path="/germany" element={<UniversityGermany />} />
+        <Route path="/uk" element={<UniversityUK />} />
+        <Route path="/new-zealand" element={<UniversityZealand />} />
+        <Route path="/france" element={<UniversityFrance />} />
+        <Route path="/sweden" element={<UniversitySweden />} />
+        <Route path="/ireland" element={<UniversityIreland />} />
+        <Route path="/how" element={<HowItWorks />} />
       </Routes>
     </BrowserRouter>
   );
