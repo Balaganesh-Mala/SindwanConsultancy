@@ -39,9 +39,9 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Services</h3>
           <ul>
-            <li>Advising</li>
+            <Link to="/advising"><li>Advising</li></Link>
             <li>Education Loan</li>
-            <li>SOP Services</li>
+            <Link to="/sop-services"><li>SOP services</li></Link>
             <li>Visa Guidance</li>
             <li>Finance Guide</li>
             <li>Country Guide</li>
@@ -80,7 +80,8 @@ const Footer = () => {
             <li>
               <Link to="/how">How it Works</Link>
             </li>
-            <li>About Us</li>
+            <Link to="/about"><li>About Us</li></Link>
+            <li>Blog</li>
             <li>Advising</li>
             <li>Terms & Conditions</li>
             <li>Privacy Policy</li>

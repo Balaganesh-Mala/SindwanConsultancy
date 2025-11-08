@@ -22,6 +22,8 @@ import UniversitySweden from "./pages/UniversitySweden/UniversitySweden.jsx";
 import UniversityIreland from "./pages/UniversityIreland/UniversityIreland.jsx";
 
 import HowItWorks from "./pages/HowItWorks/HowItWorks.jsx";
+import Advising from "./pages/Advising/Advising.jsx";
+import SOPServices from "./pages/SOPServices/SOPServices.jsx";
 
 import Bachelor from "./pages/Bachelor/Bachelor.jsx";
 import Master from "./pages/Master/Master.jsx";
@@ -62,6 +64,8 @@ const App = () => {
         <Route path="/bachelors" element={<Bachelor/>}/>
         <Route path="/masters" element={<Master/>}/>
         <Route path="/phd" element={<Phd/>}/>
+        <Route path="/advising" element={<Advising />} />
+        <Route path="/sop-services" element={<SOPServices />} />
       </Routes>
     </BrowserRouter>
   );

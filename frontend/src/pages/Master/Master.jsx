@@ -2,16 +2,16 @@ import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import "./Master.css";
-import managementImg from "../../assets/possibilities.jpg";
-import csImg from "../../assets/possibilities.jpg";
-import mbaImg from "../../assets/possibilities.jpg";
-import irImg from "../../assets/possibilities.jpg";
-import economicsImg from "../../assets/possibilities.jpg";
-import psychologyImg from "../../assets/possibilities.jpg";
-import ibImg from "../../assets/possibilities.jpg";
-import biologyImg from "../../assets/possibilities.jpg";
-import engImg from "../../assets/possibilities.jpg";
-import healthImg from "../../assets/possibilities.jpg";
+import managementImg from "../../assets/Masters1.png";
+import csImg from "../../assets/Masters2.png";
+import mbaImg from "../../assets/Masters3.png";
+import irImg from "../../assets/Masters4.png";
+import economicsImg from "../../assets/Masters6.png";
+import psychologyImg from "../../assets/Masters7.png";
+import ibImg from "../../assets/Masters8.png";
+import biologyImg from "../../assets/Masters9.png";
+import engImg from "../../assets/Masters10.png";
+import healthImg from "../../assets/Masters11.png";
 
 const Master = () => {
   return (

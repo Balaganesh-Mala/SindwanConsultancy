@@ -3,12 +3,12 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import "./Bachelor.css";
 import bannerImg from "../../assets/Bachelor’s_Degrees_Banner.jpg";
-import businessImg from "../../assets/possibilities.jpg";
-import architectureImg from "../../assets/possibilities.jpg";
-import engineeringImg from "../../assets/possibilities.jpg";
-import scienceImg from "../../assets/possibilities.jpg";
-import socialImg from "../../assets/possibilities.jpg";
-import appliedImg from "../../assets/possibilities.jpg";
+import businessImg from "../../assets/business_profestional.png";
+import architectureImg from "../../assets/professional2.png";
+import engineeringImg from "../../assets/professional3.png";
+import scienceImg from "../../assets/professional4.png";
+import socialImg from "../../assets/professional5.png";
+import appliedImg from "../../assets/professional6.png";
 
 const Bachelor = () => {
   return (
