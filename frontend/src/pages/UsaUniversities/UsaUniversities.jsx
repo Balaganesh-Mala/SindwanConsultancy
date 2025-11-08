@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer"
 import HeroCountry from "../../components/HeroCountry/HeroCountry";
-import bannerImage from "../../assets/bannerImage.jpg"
+import bannerImage from "../../assets/abroadBanner.jpg"
 import "./UsaUniversities.css";
 
 const UsaUniversities = () => {

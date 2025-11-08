@@ -1,23 +1,26 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import become_a_mentor from "../../assets/become_a_mentor.png"
+import become_a_patner from "../../assets/become_a_patner.jpg"
+import become_a_counsellor from "../../assets/become_a_counsellor.jpg"
 
 const cards = [
   {
     title: "BECOME A MENTOR",
     image:
-      "https://ik.imagekit.io/izqq5ffwt/mentor.png?updatedAt=1762255890000",
+      `${become_a_mentor}`,
     path: "/mentor",
   },
   {
     title: "BECOME A PARTNER",
     image:
-      "https://ik.imagekit.io/izqq5ffwt/partner.png?updatedAt=1762255890000",
+      `${become_a_patner}`,
     path: "/partner",
   },
   {
     title: "BECOME A COUNSELLOR",
     image:
-      "https://ik.imagekit.io/izqq5ffwt/counsellor.png?updatedAt=1762255890000",
+      `${become_a_counsellor}`,
     path: "/counsellor",
   },
 ];
@@ -29,7 +32,7 @@ const WhoWeAre = () => {
     <section className="bg-[#f7f6f2] py-16 text-center px-6 font-poppins">
       <div className="max-w-6xl mx-auto">
         <img
-          src="https://ik.imagekit.io/izqq5ffwt/logo-icon.png?updatedAt=1762255890000"
+          src="https://ik.imagekit.io/izqq5ffwt/ChatGPT%20Image%20Nov%204,%202025,%2003_31_41%20PM.png"
           alt="Logo Icon"
           className="w-10 h-10 mx-auto mb-4"
         />

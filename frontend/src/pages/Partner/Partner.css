@@ -4,12 +4,14 @@
   padding: 60px 10%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 60px;
 }
 
 /* Banner Section */
 .partner-banner {
-  background: url("/images/partner-banner.jpg") center/cover no-repeat;
+  background: url("https://ik.imagekit.io/izqq5ffwt/Screenshot%202025-11-06%20152724.png") center/cover no-repeat;
   height: 400px;
   display: flex;
   align-items: center;
@@ -22,7 +24,8 @@
   text-align: center;
   color: #fff;
   padding: 50px 30px;
-  border-radius: 12px;
+  width: 100%;
+  height: 100%;
 }
 
 .partner-banner-overlay h1 {

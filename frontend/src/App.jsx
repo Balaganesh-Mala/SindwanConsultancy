@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Hero from "./components/Hero/Hero.jsx";
-import CountryGuide from "./components/CountryGuide/CountryGuide.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import WhatsAppButton from "./components/WhatsappButoon/WhatsappButton.jsx";
 import AdvancedTools from "./components/AdvancedTools/AdvancedTools.jsx";
@@ -23,6 +22,10 @@ import UniversitySweden from "./pages/UniversitySweden/UniversitySweden.jsx";
 import UniversityIreland from "./pages/UniversityIreland/UniversityIreland.jsx";
 
 import HowItWorks from "./pages/HowItWorks/HowItWorks.jsx";
+
+import Bachelor from "./pages/Bachelor/Bachelor.jsx";
+import Master from "./pages/Master/Master.jsx";
+import Phd from "./pages/Phd/Phd.jsx";
 
 const Home = () => {
   return (
@@ -56,6 +59,9 @@ const App = () => {
         <Route path="/sweden" element={<UniversitySweden />} />
         <Route path="/ireland" element={<UniversityIreland />} />
         <Route path="/how" element={<HowItWorks />} />
+        <Route path="/bachelors" element={<Bachelor/>}/>
+        <Route path="/masters" element={<Master/>}/>
+        <Route path="/phd" element={<Phd/>}/>
       </Routes>
     </BrowserRouter>
   );

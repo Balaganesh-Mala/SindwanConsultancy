@@ -1,6 +1,6 @@
 /* Banner Section */
 .mentor-banner {
-  background: url("/images/mentor-banner.jpg") center/cover no-repeat;
+  background: url("https://ik.imagekit.io/izqq5ffwt/Screenshot%202025-11-06%20154426.png") center/cover no-repeat;
   height: 400px;
   display: flex;
   align-items: center;
@@ -13,7 +13,8 @@
   text-align: center;
   color: #fff;
   padding: 50px 30px;
-  border-radius: 12px;
+  width: 100%;
+  height: 100%;
 }
 
 .mentor-banner-overlay h1 {
@@ -29,7 +30,7 @@
 }
 
 .mentor-banner-overlay button {
-  background: #ff7b00;
+  background: #0400ff;
   color: white;
   border: none;
   padding: 12px 25px;
@@ -40,7 +41,7 @@
 }
 
 .mentor-banner-overlay button:hover {
-  background: #ff9b2f;
+  background: #592fff;
 }
 
 /* Mentor Section */

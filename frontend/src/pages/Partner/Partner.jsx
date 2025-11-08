@@ -2,6 +2,7 @@ import React from "react";
 import "./Partner.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
+import banner from "../../assets/corporateBanner.png"
 
 const Partner = () => {
   return (
@@ -29,7 +30,7 @@ const Partner = () => {
       {/* Partner Content Section */}
       <section className="partner-section">
         <div className="partner-card">
-          <img src="/images/pay-scale.jpg" alt="Good Pay Scale" />
+          <img src={banner} alt="Good Pay Scale" />
           <div className="partner-text">
             <h3>GOOD PAY-SCALE</h3>
             <p>

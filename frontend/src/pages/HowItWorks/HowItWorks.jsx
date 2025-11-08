@@ -3,17 +3,17 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import "./HowItWorks.css";
 import bannerImg from "../../assets/bannerImage.jpg";
-import step1 from "../../assets/step2.jpg";
-import step2 from "../../assets/step2.jpg";
-import step3 from "../../assets/step2.jpg";
-import step4 from "../../assets/step2.jpg";
-import step5 from "../../assets/step2.jpg";
-import step6 from "../../assets/step2.jpg";
-import step7 from "../../assets/step2.jpg";
-import card1 from "../../assets/step2.jpg";
-import card2 from "../../assets/step2.jpg";
-import card3 from "../../assets/step2.jpg";
-import card4 from "../../assets/step2.jpg";
+import step1 from "../../assets/step1.png";
+import step2 from "../../assets/step2.png";
+import step3 from "../../assets/step3.png";
+import step4 from "../../assets/step4.png";
+import step5 from "../../assets/step5.png";
+import step6 from "../../assets/step6.png";
+import step7 from "../../assets/step7.png";
+import card1 from "../../assets/card1.png";
+import card2 from "../../assets/card2.png";
+import card3 from "../../assets/card3.png";
+import card4 from "../../assets/card4.png";
 
 const HowItWorks = () => {
   return (
@@ -22,15 +22,15 @@ const HowItWorks = () => {
 
       <section
         className="howitworks-hero"
-        style={{ backgroundImage: `url(${bannerImg})` }}
+        style={{ backgroundImage: `url(https://ik.imagekit.io/izqq5ffwt/Screenshot%202025-11-06%20152724.png?updatedAt=1762423779051)` }}
       >
         <div className="hero-overlay">
-          <h1>Get to Universities with Confidence</h1>
+          <div><h1>Get to Universities with Confidence</h1>
           <p>
             Edmium makes it easy to reach your dream university with clarity,
             guidance, and support every step of the way.
           </p>
-          <button className="hero-btn">Get Started</button>
+          <button className="hero-btn">Get Started</button></div>
         </div>
       </section>
 

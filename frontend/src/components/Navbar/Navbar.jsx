@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +21,12 @@ const Navbar = () => {
     setActiveDropdown(activeDropdown === menu ? null : menu);
   };
 
+  const handleNavClick = (path) => {
+    navigate(path);
+    setOpen(false);
+    setActiveDropdown(null);
+  };
+
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-500 ${
@@ -26,8 +34,8 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-3">
-        <div >
-          <a href="/" className="flex items-center space-x-3"><img
+        <div onClick={() => handleNavClick("/")} className="cursor-pointer flex items-center space-x-3">
+          <img
             src="https://ik.imagekit.io/izqq5ffwt/ChatGPT%20Image%20Nov%204,%202025,%2003_31_41%20PM.png"
             alt="website logo"
             className="w-10 h-10 md:w-12 md:h-12 object-contain"
@@ -38,119 +46,87 @@ const Navbar = () => {
             }`}
           >
             Sindwan Consultancy
-          </h1></a>
+          </h1>
         </div>
 
+        {/* Desktop Menu */}
         <div
           className={`hidden md:flex space-x-8 font-medium items-center transition-colors duration-300 ${
             scrolled ? "text-gray-800" : "text-white"
           }`}
         >
-          <a href="/" className="hover:text-blue-600 transition-colors">
+          <button onClick={() => handleNavClick("/")} className="hover:text-blue-600">
             Home
-          </a>
+          </button>
 
-          <div className="relative group">
-            <button
-              onClick={() => toggleDropdown("courses")}
-              className="flex items-center hover:text-blue-600 transition-colors"
-            >
+          <div className="relative">
+            <button onClick={() => toggleDropdown("courses")} className="flex items-center hover:text-blue-600">
               Courses <FaChevronDown className="ml-1 text-sm" />
             </button>
             {activeDropdown === "courses" && (
               <div className="absolute top-8 left-0 bg-white shadow-md rounded-md w-40 py-2 text-gray-700">
-                <a
-                  href="#bachelors"
-                  className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
-                >
+                <button onClick={() => handleNavClick("/bachelors")} className="block w-full text-left px-4 py-2 hover:bg-blue-50 hover:text-blue-600">
                   Bachelors
-                </a>
-                <a
-                  href="#masters"
-                  className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
-                >
+                </button>
+                <button onClick={() => handleNavClick("/masters")} className="block w-full text-left px-4 py-2 hover:bg-blue-50 hover:text-blue-600">
                   Masters
-                </a>
-                <a
-                  href="#phd"
-                  className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
-                >
+                </button>
+                <button onClick={() => handleNavClick("/phd")} className="block w-full text-left px-4 py-2 hover:bg-blue-50 hover:text-blue-600">
                   PhDs
-                </a>
+                </button>
               </div>
             )}
           </div>
 
-          <a href="#advising" className="hover:text-blue-600 transition-colors">
+          <button onClick={() => handleNavClick("/advising")} className="hover:text-blue-600">
             Advising
-          </a>
+          </button>
 
-          <div className="relative group">
-            <button
-              onClick={() => toggleDropdown("universities")}
-              className="flex items-center hover:text-blue-600 transition-colors"
-            >
+          <div className="relative">
+            <button onClick={() => toggleDropdown("universities")} className="flex items-center hover:text-blue-600">
               Universities <FaChevronDown className="ml-1 text-sm" />
             </button>
             {activeDropdown === "universities" && (
               <div className="absolute top-8 left-0 bg-white shadow-md rounded-md w-56 py-2 text-gray-700">
-                {[
-                  "USA",
-                  "Australia",
-                  "Canada",
-                  "Germany",
-                  "UK",
-                  "New Zealand",
-                  "France",
-                  "Sweden",
-                  "Ireland",
-                ].map((country) => (
-                  <a
-                    key={country}
-                    href={`/${country.toLowerCase().replace(" ", "-")}`}
-                    className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
-                  >
-                    {country}
-                  </a>
-                ))}
+                {["USA", "Australia", "Canada", "Germany", "UK", "New Zealand", "France", "Sweden", "Ireland"].map(
+                  (country) => (
+                    <button
+                      key={country}
+                      onClick={() =>
+                        handleNavClick(`/${country.toLowerCase().replace(" ", "-")}`)
+                      }
+                      className="block w-full text-left px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
+                    >
+                      {country}
+                    </button>
+                  )
+                )}
               </div>
             )}
           </div>
 
-          <div className="relative group">
-            <button
-              onClick={() => toggleDropdown("work")}
-              className="flex items-center hover:text-blue-600 transition-colors"
-            >
+          <div className="relative">
+            <button onClick={() => toggleDropdown("work")} className="flex items-center hover:text-blue-600">
               Work With Us <FaChevronDown className="ml-1 text-sm" />
             </button>
             {activeDropdown === "work" && (
               <div className="absolute top-8 left-0 bg-white shadow-md rounded-md w-48 py-2 text-gray-700">
-                <a
-                  href="/partner"
-                  className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
-                >
+                <button onClick={() => handleNavClick("/partner")} className="block w-full text-left px-4 py-2 hover:bg-blue-50 hover:text-blue-600">
                   Become A Partner
-                </a>
-                <a
-                  href="/mentor"
-                  className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
-                >
+                </button>
+                <button onClick={() => handleNavClick("/mentor")} className="block w-full text-left px-4 py-2 hover:bg-blue-50 hover:text-blue-600">
                   Become A Mentor
-                </a>
-                <a
-                  href="/counsellor"
-                  className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
-                >
+                </button>
+                <button onClick={() => handleNavClick("/counsellor")} className="block w-full text-left px-4 py-2 hover:bg-blue-50 hover:text-blue-600">
                   Become A Counsellor
-                </a>
+                </button>
               </div>
             )}
           </div>
 
-          <a href="#how" className="hover:text-blue-600 transition-colors">
+          <button onClick={() => handleNavClick("/how")} className="hover:text-blue-600">
             How It Works
-          </a>
+          </button>
         </div>
 
         <button
@@ -162,111 +138,6 @@ const Navbar = () => {
           {open ? <FaTimes /> : <FaBars />}
         </button>
       </div>
-
-      {open && (
-        <div className="md:hidden bg-white flex flex-col space-y-4 px-6 py-4 font-medium text-gray-800 shadow-lg">
-          <a href="#hero" onClick={() => setOpen(false)} className="hover:text-blue-600">
-            Home
-          </a>
-
-          <div>
-            <button
-              onClick={() => toggleDropdown("courses")}
-              className="w-full flex justify-between items-center font-semibold hover:text-blue-600"
-            >
-              Courses <FaChevronDown className="ml-2" />
-            </button>
-            {activeDropdown === "courses" && (
-              <ul className="pl-4 space-y-1 mt-2">
-                <li>
-                  <a href="#bachelors" className="hover:text-blue-600">
-                    Bachelors
-                  </a>
-                </li>
-                <li>
-                  <a href="#masters" className="hover:text-blue-600">
-                    Masters
-                  </a>
-                </li>
-                <li>
-                  <a href="#phd" className="hover:text-blue-600">
-                    PhDs
-                  </a>
-                </li>
-              </ul>
-            )}
-          </div>
-
-          <a href="#advising" onClick={() => setOpen(false)} className="hover:text-blue-600">
-            Advising
-          </a>
-
-          <div>
-            <button
-              onClick={() => toggleDropdown("universities")}
-              className="w-full flex justify-between items-center font-semibold hover:text-blue-600"
-            >
-              Universities <FaChevronDown className="ml-2" />
-            </button>
-            {activeDropdown === "universities" && (
-              <ul className="pl-4 space-y-1 mt-2">
-                {[
-                  "USA",
-                  "Australia",
-                  "Canada",
-                  "Germany",
-                  "UK",
-                  "New Zealand",
-                  "France",
-                  "Sweden",
-                  "Ireland",
-                ].map((country) => (
-                  <li key={country}>
-                    <a
-                      href={`/${country.toLowerCase().replace(" ", "-")}`}
-                      className="hover:text-blue-600"
-                    >
-                      {country}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-
-          <div>
-            <button
-              onClick={() => toggleDropdown("work")}
-              className="w-full flex justify-between items-center font-semibold hover:text-blue-600"
-            >
-              Work With Us <FaChevronDown className="ml-2" />
-            </button>
-            {activeDropdown === "work" && (
-              <ul className="pl-4 space-y-1 mt-2">
-                <li>
-                  <a href="/partner" className="hover:text-blue-600">
-                    Become A Partner
-                  </a>
-                </li>
-                <li>
-                  <a href="/mentor" className="hover:text-blue-600">
-                    Become A Mentor
-                  </a>
-                </li>
-                <li>
-                  <a href="/counsellor" className="hover:text-blue-600">
-                    Become A Counsellor
-                  </a>
-                </li>
-              </ul>
-            )}
-          </div>
-
-          <a href="#how" onClick={() => setOpen(false)} className="hover:text-blue-600">
-            How It Works
-          </a>
-        </div>
-      )}
     </nav>
   );
 };

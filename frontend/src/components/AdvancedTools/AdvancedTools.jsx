@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import possibilitiesImage from "../../assets/possibilities.jpg"
+import find from "../../assets/find.jpg"
 import HeroForm from "../HeroForm/HeroForm"; // import your HeroForm component
 
 const tools = [
@@ -15,7 +16,7 @@ const tools = [
     description: "Look for Universities that best suit your interests",
     button: "FIND YOUR FIT",
     image:
-      "https://ik.imagekit.io/izqq5ffwt/ChatGPT%20Image%20Nov%204,%202025,%2004_05_45%20PM.png?updatedAt=1762252586368",
+      `${find}`,
   },
   {
     title: "CAREERS AND COURSES",

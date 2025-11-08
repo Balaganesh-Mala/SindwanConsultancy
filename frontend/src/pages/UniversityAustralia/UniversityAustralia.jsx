@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import HeroCountry from "../../components/HeroCountry/HeroCountry";
-import australiaBanner from "../../assets/bannerImage.jpg";
+import australiaBanner from "../../assets/educationBanner.jpg";
 import "./UniversityAustralia.css";
 
 const UniversityAustralia = () => {
