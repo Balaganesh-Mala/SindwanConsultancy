@@ -4,6 +4,8 @@ import become_a_mentor from "../../assets/become_a_mentor.png"
 import become_a_patner from "../../assets/become_a_patner.jpg"
 import become_a_counsellor from "../../assets/become_a_counsellor.jpg"
 
+//added images above
+
 const cards = [
   {
     title: "BECOME A MENTOR",
