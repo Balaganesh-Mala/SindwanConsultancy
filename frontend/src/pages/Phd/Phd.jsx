@@ -6,6 +6,12 @@ import HeroForm from "../../components/HeroForm/HeroForm";
 
 import bannerImg from "../../assets/PhD_Banner.jpg";
 import phdImg from "../../assets/Ph.D. Programs in Computer Science.jpg";
+import phdImg1 from "../../assets/phd1.png"
+import phdImg2 from "../../assets/phd2.png"
+import phdImg3 from "../../assets/phd3.png"
+import phdImg4 from "../../assets/phd4.png"
+import phdImg5 from "../../assets/phd5.png"
+import phdImg6 from "../../assets/phd6.png"
 
 const phdPrograms = [
   {
@@ -18,7 +24,7 @@ const phdPrograms = [
       "California Institute of Technology, U.S.A",
       "Imperial College London, UK",
     ],
-    img: phdImg,
+    img: phdImg1,
     reverse: false,
   },
   {
@@ -31,7 +37,7 @@ const phdPrograms = [
       "University of Edinburgh, UK",
       "University of Toronto, Canada",
     ],
-    img: phdImg,
+    img: phdImg2,
     reverse: true,
   },
   {
@@ -44,7 +50,7 @@ const phdPrograms = [
       "Australian National University, Australia",
       "University of Auckland, New Zealand",
     ],
-    img: phdImg,
+    img: phdImg3,
     reverse: false,
   },
   {
@@ -57,7 +63,7 @@ const phdPrograms = [
       "Cornell University, U.S.A",
       "California Institute of Technology, U.S.A",
     ],
-    img: phdImg,
+    img: phdImg4,
     reverse: true,
   },
   {
@@ -70,7 +76,7 @@ const phdPrograms = [
       "University of Manchester, UK",
       "Cranfield University, UK",
     ],
-    img: phdImg,
+    img: phdImg5,
     reverse: false,
   },
   {
@@ -83,7 +89,7 @@ const phdPrograms = [
       "Purdue University, U.S.A",
       "University of New South Wales, Australia",
     ],
-    img: phdImg,
+    img: phdImg6,
     reverse: true,
   },
 ];
