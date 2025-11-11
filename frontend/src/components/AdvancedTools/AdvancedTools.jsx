@@ -1,22 +1,22 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
-import possibilitiesImage from "../../assets/possibilities.jpg"
-import find from "../../assets/find.jpg"
-import HeroForm from "../HeroForm/HeroForm"; // import your HeroForm component
+import possibilitiesImage from "../../assets/possibilities.jpg";
+import find from "../../assets/find.jpg";
+import HeroForm from "../HeroForm/HeroForm";
 
 const tools = [
   {
     title: "WHAT ARE MY POSSIBILITIES?",
     description: "Check your chances of getting into top Universities",
     button: "SEE YOUR CHANCE",
-    image:`${possibilitiesImage}`,
+    image: `${possibilitiesImage}`,
   },
   {
     title: "MY SCORE CARD",
     description: "Look for Universities that best suit your interests",
     button: "FIND YOUR FIT",
-    image:
-      `${find}`,
+    image: `${find}`,
   },
   {
     title: "CAREERS AND COURSES",
@@ -43,15 +43,28 @@ const AdvancedTools = () => {
 
   return (
     <section className="bg-white py-16 text-center font-poppins relative">
-      <h2 className="text-2xl md:text-3xl font-semibold text-blue-900 mb-12 tracking-wide">
-        ADVANCED TOOLS CUSTOMIZED FOR YOU
-      </h2>
 
+      {/* Title Animation */}
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        className="text-2xl md:text-3xl font-semibold text-blue-900 mb-12 tracking-wide"
+      >
+        ADVANCED TOOLS CUSTOMIZED FOR YOU
+      </motion.h2>
+
+      {/* Cards */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 px-6">
         {tools.map((tool, index) => (
-          <div
+          <motion.div
             key={index}
-            className="flex flex-col items-center justify-center bg-white shadow-md hover:shadow-xl rounded-xl p-6 transition-all duration-500 hover:scale-[1.03]"
+            className="flex flex-col items-center justify-center bg-white shadow-md hover:shadow-xl rounded-xl p-6 transition-all duration-500"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.1, delay: index * 0.1 }}
+            whileHover={{ scale: 1.05, y: -5 }}
           >
             <img
               src={tool.image}
@@ -64,23 +77,34 @@ const AdvancedTools = () => {
             <p className="text-gray-600 text-sm mb-5 px-4">
               {tool.description}
             </p>
-            <button
+
+            <motion.button
               onClick={() => handleOpenForm(tool)}
+              whileTap={{ scale: 0.9 }}
               className="bg-blue-500 text-white text-sm font-semibold px-6 py-2 rounded-full hover:bg-blue-600 transition-colors duration-300"
             >
               {tool.button}
-            </button>
-          </div>
+            </motion.button>
+          </motion.div>
         ))}
       </div>
 
-      {/* Form Modal */}
+      {/* Modal */}
       {showForm && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center z-50">
-          <div className="relative w-full max-w-lg">
+        <motion.div
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center z-50"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.4 }}
+            className="relative w-full max-w-lg"
+          >
             <HeroForm selectedTool={selectedTool} closeForm={handleCloseForm} />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       )}
     </section>
   );

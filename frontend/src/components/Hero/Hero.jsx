@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import HeroForm from "../HeroForm/HeroForm";
+import AwardImage from "../../assets/Awards.png";
 import "./Hero.css";
 
 const Hero = () => {
@@ -9,7 +10,7 @@ const Hero = () => {
   return (
     <section id="hero" className="flex items-center justify-center text-center">
       <video
-        src="https://www.edmium.com/wp-content/uploads/2020/10/home-background.mp4"
+        src="https://ik.imagekit.io/iiz6sw7ik/VN20251109_110332.mp4"
         autoPlay
         loop
         muted
@@ -30,12 +31,12 @@ const Hero = () => {
           transition={{ delay: 0.5 }}
           className="text-2xl md:text-4xl text-blue-300 mb-8 font-semibold"
         >
-          YOUR MEDIUM TO OVERSEAS
+          YOUR SINDWAN CONSULTANCY TO OVERSEAS
         </motion.h2>
         <img
-          src="https://www.edmium.com/wp-content/uploads/2024/05/Award-Edmium-Web.png"
+          src={AwardImage}
           alt="Awards"
-          className="w-60 md:w-72 mx-auto mb-6"
+          className="w-70 md:w-100 mx-auto mb-6"
         />
         {!showForm && (
           <motion.button

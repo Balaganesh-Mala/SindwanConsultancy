@@ -43,7 +43,7 @@ const Footer = () => {
             <li>Education Loan</li>
             <Link to="/sop-services"><li>SOP services</li></Link>
             <li>Visa Guidance</li>
-            <li>Finance Guide</li>
+            <Link to="/roadmap"><li>Roadmap to Study Abroad & Finance Guide</li></Link>
             <li>Country Guide</li>
           </ul>
         </div>
@@ -82,7 +82,7 @@ const Footer = () => {
             </li>
             <Link to="/about"><li>About Us</li></Link>
             <li>Blog</li>
-            <li>Advising</li>
+            <Link to="/advising"><li>Advising</li></Link>
             <li>Terms & Conditions</li>
             <li>Privacy Policy</li>
             <li>FAQs</li>
@@ -91,37 +91,7 @@ const Footer = () => {
       </div>
 
       {/* Branches Section */}
-      <div className="footer-branches">
-        <h3>Our Branches</h3>
-        <div className="branches-grid">
-          <div>
-            <strong>Whitefield, Bangalore</strong>
-            <br />
-            411Floor, Brigade IRV Center
-            <br />
-            Whitefield Road, Bangalore 560066
-          </div>
-          <div>
-            <strong>Vijayawada</strong>
-            <br />
-            Flat No:301, Hafeez Plaza
-            <br />
-            Sailara Hospital Road, Vijayawada 520010
-          </div>
-          <div>
-            <strong>Guntur</strong>
-            <br />
-            3rd Floor, NDR Complex
-            <br />
-            Lakshmipuram Main Road, Guntur 522007
-          </div>
-          <div>
-            <strong>Madhapur, Hyderabad</strong>
-            <br />
-            Tulip Gardens, Flat No G5, Vittal Rao Nagar, Hyderabad 500081
-          </div>
-        </div>
-      </div>
+      
 
       {/* Contact Section */}
       <div className="footer-contact">

@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-import "./Bachelor.css";
+import HeroForm from "../../components/HeroForm/HeroForm";
+
 import bannerImg from "../../assets/Bachelor’s_Degrees_Banner.jpg";
 import businessImg from "../../assets/business_profestional.png";
 import architectureImg from "../../assets/professional2.png";
@@ -10,140 +12,193 @@ import scienceImg from "../../assets/professional4.png";
 import socialImg from "../../assets/professional5.png";
 import appliedImg from "../../assets/professional6.png";
 
+// ✅ Data Sections
+const sections = [
+  {
+    title: "Business and Management",
+    img: businessImg,
+    reverse: false,
+    text:
+      "Business & Management teaches you everything about running a successful organization. Explore Project Management, Business Administration, Finance, Marketing, HR and learn how to manage teams and grow businesses globally.",
+    points: [
+      "University of Bristol, United Kingdom",
+      "University of Glasgow, United Kingdom",
+      "University of Arizona, U.S.A",
+      "Baylor University, U.S.A",
+      "Monash University, Australia",
+      "Dalhousie University, Canada",
+    ],
+  },
+  {
+    title: "Arts, Design and Architecture",
+    img: architectureImg,
+    reverse: true,
+    text:
+      "Arts & Design degrees build creative thinkers. Architecture develops professionals to design inspiring spaces. Build visual, conceptual, and technical skills for creative industries.",
+    points: [
+      "University of Victoria, Canada",
+      "Simon Fraser University, Canada",
+      "University of New South Wales, Australia",
+      "Nottingham Trent University, UK",
+      "American University, U.S.A",
+      "Baylor University, U.S.A",
+    ],
+  },
+  {
+    title: "Engineering and Technology",
+    img: engineeringImg,
+    reverse: false,
+    text:
+      "Engineering & Technology equips you to innovate and solve global problems. Learn mechanical, electrical, computing and advanced technologies for real-world industries.",
+    points: [
+      "Queensland University of Technology, Australia",
+      "University of Birmingham, UK",
+      "University of Vermont, U.S.A",
+      "University of Surrey, UK",
+      "University of Victoria, Canada",
+    ],
+  },
+  {
+    title: "Natural Sciences",
+    img: scienceImg,
+    reverse: true,
+    text:
+      "Natural Sciences explore biology, chemistry, physics and geology. Build research skills to innovate in biotechnology and environmental science.",
+    points: [
+      "University of Saskatchewan, Canada",
+      "University of Surrey, UK",
+      "Baylor University, U.S.A",
+      "Macquarie University, Australia",
+      "RMIT University, Australia",
+    ],
+  },
+  {
+    title: "Social Sciences",
+    img: socialImg,
+    reverse: false,
+    text:
+      "Social Sciences explore human behavior and systems. Learn sociology, psychology, economics, and political science to build impactful careers.",
+    points: [
+      "University of Tasmania, Australia",
+      "University of South Australia",
+      "The University of Huddersfield, UK",
+      "University of Dundee, UK",
+      "University of Utah, U.S.A",
+    ],
+  },
+  {
+    title: "Applied Sciences",
+    img: appliedImg,
+    reverse: true,
+    text:
+      "Applied Sciences focus on practical scientific applications like Forensic Science, Food Science, and Emergency Management.",
+    points: [
+      "University of Tasmania, Australia",
+      "Curtin University, Australia",
+      "University of South Florida, U.S.A",
+      "University of Surrey, UK",
+      "Newcastle University, UK",
+    ],
+  },
+];
+
 const Bachelor = () => {
+  const [showForm, setShowForm] = useState(false);
+
+  const openHeroForm = () => setShowForm(true);
+  const closeHeroForm = () => setShowForm(false);
+
   return (
-    <div className="bachelor-container">
+    <div className="font-poppins text-[#002b5c] bg-white">
       <Navbar />
 
+      {/* ✅ HERO SECTION */}
       <section
-        className="bachelor-hero"
+        className="relative h-[70vh] bg-cover bg-center flex items-center justify-center"
         style={{ backgroundImage: `url(${bannerImg})` }}
       >
-        <div className="hero-overlay">
-          <div><h1>Explore Top Bachelor’s Degrees</h1>
-          <p>
-            Discover your path to a world-class education across leading fields and universities worldwide.
+        <div className="absolute inset-0 bg-[#002b5c]/60"></div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="relative text-center text-white px-4 max-w-2xl"
+        >
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+            Explore Top Bachelor’s Degrees
+          </h1>
+          <p className="text-base md:text-lg mb-6">
+            Discover your path to a world-class education across leading fields worldwide.
           </p>
-          <button className="hero-btn">Get Started</button></div>
-        </div>
+
+          <motion.button
+            whileHover={{ scale: 1.08 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={openHeroForm}
+            className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-md font-semibold"
+          >
+            Get Started
+          </motion.button>
+        </motion.div>
       </section>
 
-      <section className="bachelor-content">
-        <div className="bachelor-section">
-          <img src={businessImg} alt="Business and Management" />
-          <div className="text">
-            <h2>Business and Management</h2>
-            <p>
-              Business & Management teaches you everything about running a successful organization. You’ll explore
-              subdisciplines like Project Management, Business Administration, Finance, Marketing, and Human Resource Management.
-              Learn how to manage teams, analyze performance, and grow businesses globally.
-            </p>
-            <ul>
-              <li>University of Bristol, United Kingdom</li>
-              <li>University of Glasgow, United Kingdom</li>
-              <li>University of Arizona, U.S.A</li>
-              <li>Baylor University, U.S.A</li>
-              <li>Monash University, Australia</li>
-              <li>Dalhousie University, Canada</li>
-            </ul>
-          </div>
-        </div>
+      {/* ✅ CONTENT SECTIONS */}
+      <section className="py-16 px-6 md:px-16">
+        {sections.map((sec, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 35 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className={`flex flex-col ${
+              sec.reverse ? "md:flex-row-reverse" : "md:flex-row"
+            } gap-10 mb-20 items-center`}
+          >
+            <img
+              src={sec.img}
+              alt={sec.title}
+              className="w-full md:w-1/3 rounded-xl shadow-xl"
+            />
 
-        <div className="bachelor-section reverse">
-          <img src={architectureImg} alt="Arts, Design and Architecture" />
-          <div className="text">
-            <h2>Arts, Design and Architecture</h2>
-            <p>
-              Arts and Design degrees build creative thinkers who express ideas through various forms. Architecture programs
-              prepare professionals to design functional and inspiring spaces. Develop your visual, technical, and conceptual skills
-              for careers in art, design, and architecture.
-            </p>
-            <ul>
-              <li>University of Victoria, Canada</li>
-              <li>Simon Fraser University, Canada</li>
-              <li>University of New South Wales, Australia</li>
-              <li>Nottingham Trent University, United Kingdom</li>
-              <li>American University, U.S.A</li>
-              <li>Baylor University, U.S.A</li>
-            </ul>
-          </div>
-        </div>
+            <div className="md:w-1/2">
+              <h2 className="text-2xl font-bold text-[#003b88] mb-4">
+                {sec.title}
+              </h2>
 
-        <div className="bachelor-section">
-          <img src={engineeringImg} alt="Engineering and Technology" />
-          <div className="text">
-            <h2>Engineering and Technology</h2>
-            <p>
-              Engineering and Technology degrees teach you to innovate and solve real-world problems. From mechanical systems to
-              advanced computer technologies, develop technical expertise to create sustainable solutions for industries worldwide.
-            </p>
-            <ul>
-              <li>Queensland University of Technology, Australia</li>
-              <li>University of Birmingham, United Kingdom</li>
-              <li>University of Vermont, U.S.A</li>
-              <li>University of Surrey, United Kingdom</li>
-              <li>University of Victoria, Canada</li>
-            </ul>
-          </div>
-        </div>
+              <p className="text-gray-700 mb-4 leading-relaxed">{sec.text}</p>
 
-        <div className="bachelor-section reverse">
-          <img src={scienceImg} alt="Natural Sciences" />
-          <div className="text">
-            <h2>Natural Sciences</h2>
-            <p>
-              Natural Sciences explore the principles governing our world—biology, chemistry, physics, and geology.
-              Learn to conduct experiments, analyze results, and innovate across research, biotechnology, and environmental sciences.
-            </p>
-            <ul>
-              <li>University of Saskatchewan, Canada</li>
-              <li>University of Surrey, United Kingdom</li>
-              <li>Baylor University, U.S.A</li>
-              <li>Macquarie University, Australia</li>
-              <li>RMIT University, Australia</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="bachelor-section">
-          <img src={socialImg} alt="Social Sciences" />
-          <div className="text">
-            <h2>Social Sciences</h2>
-            <p>
-              Social Sciences examine society, behavior, and relationships through subjects like Sociology, Psychology,
-              Economics, and Political Science. Gain critical insight into human systems and prepare for impactful careers in
-              governance, research, and communication.
-            </p>
-            <ul>
-              <li>University of Tasmania, Australia</li>
-              <li>University of South Australia, Australia</li>
-              <li>The University of Huddersfield, United Kingdom</li>
-              <li>University of Dundee, United Kingdom</li>
-              <li>University of Utah, U.S.A</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="bachelor-section reverse">
-          <img src={appliedImg} alt="Applied Sciences" />
-          <div className="text">
-            <h2>Applied Sciences</h2>
-            <p>
-              Applied Sciences focus on real-world applications of scientific knowledge. Explore disciplines like Forensic Science,
-              Food Sciences, and Emergency Management, designed to equip you with practical skills for diverse industries.
-            </p>
-            <ul>
-              <li>University of Tasmania, Australia</li>
-              <li>Curtin University, Australia</li>
-              <li>University of South Florida, U.S.A</li>
-              <li>University of Surrey, United Kingdom</li>
-              <li>Newcastle University, United Kingdom</li>
-            </ul>
-          </div>
-        </div>
+              <ul className="list-disc pl-5 text-blue-700">
+                {sec.points.map((p, idx) => (
+                  <li key={idx} className="mb-1">
+                    {p}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </motion.div>
+        ))}
       </section>
 
       <Footer />
+
+      {/* ✅ HERO FORM MODAL */}
+      {showForm && (
+        <motion.div
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center z-50"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.4 }}
+            className="w-full max-w-lg"
+          >
+            <HeroForm selectedTool={{ title: "Bachelor Programs" }} closeForm={closeHeroForm} />
+          </motion.div>
+        </motion.div>
+      )}
     </div>
   );
 };

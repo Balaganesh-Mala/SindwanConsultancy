@@ -29,6 +29,8 @@ import Bachelor from "./pages/Bachelor/Bachelor.jsx";
 import Master from "./pages/Master/Master.jsx";
 import Phd from "./pages/Phd/Phd.jsx";
 
+import RoadmapSection from "./pages/RoadmapSection/RoadmapSection.jsx";
+
 const Home = () => {
   return (
     <>
@@ -66,6 +68,7 @@ const App = () => {
         <Route path="/phd" element={<Phd/>}/>
         <Route path="/advising" element={<Advising />} />
         <Route path="/sop-services" element={<SOPServices />} />
+        <Route path="/roadmap" element={<RoadmapSection />} />
       </Routes>
     </BrowserRouter>
   );
