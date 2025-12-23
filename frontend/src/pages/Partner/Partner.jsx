@@ -10,25 +10,41 @@ import partner4 from "../../assets/partner4.png";
 const cards = [
   {
     title: "GOOD PAY-SCALE",
-    text: "Earn a generous payout with each successful application. Our partner counsellors enjoy transparent payouts and fast payments.",
+    text: `Earn a highly rewarding payout for every successful student application you refer. 
+    Our partner counsellors enjoy a transparent commission structure, timely settlements, and 
+    performance-based incentives. The more students you assist, the higher your earnings grow. 
+    With our smooth and reliable payout system, your hard work is always valued and compensated.`,
     image: partner1,
   },
+
   {
     title: "FASTEST PROCESSING PROCEDURES",
-    text: "Students are contacted within hours after form submission. Our team processes applications instantly to save valuable time.",
+    text: `We ensure your leads are never left waiting. Students are contacted within hours of 
+    submitting the form, and our team immediately begins profile evaluation. Our streamlined 
+    system minimizes delays, speeds up application workflows, and enhances student satisfaction — 
+    helping you maintain trust and credibility with every referral.`,
     image: partner2,
   },
+
   {
     title: "MAXIMIZE YOUR LEADS",
-    text: "Connect with eligible candidates easily. Help students find the right courses based on background and proficiency.",
+    text: `We help you connect with the most suitable and eligible students based on their academic 
+    background, interests, and language proficiency. Our intelligent profiling system ensures 
+    high-quality conversions and targeted support. With better matching and better guidance, 
+    you can grow your network faster and increase your success rate effortlessly.`,
     image: partner3,
   },
+
   {
     title: "SCHOLARSHIP INFORMATION",
-    text: "Guide students with the right scholarship options. Make financial support easy with verified information.",
+    text: `Stay updated with verified scholarship opportunities across universities and programs. 
+    We help you guide students in securing the best possible financial aid based on merit, need, 
+    course selection, and eligibility. Accurate information means better decision-making — enabling 
+    you to help students reduce costs and access global education with confidence.`,
     image: partner4,
   },
 ];
+
 
 const Partner = () => {
   return (

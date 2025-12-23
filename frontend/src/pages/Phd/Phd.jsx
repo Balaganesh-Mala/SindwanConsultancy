@@ -6,17 +6,23 @@ import HeroForm from "../../components/HeroForm/HeroForm";
 
 import bannerImg from "../../assets/PhD_Banner.jpg";
 import phdImg from "../../assets/Ph.D. Programs in Computer Science.jpg";
-import phdImg1 from "../../assets/phd1.png"
-import phdImg2 from "../../assets/phd2.png"
-import phdImg3 from "../../assets/phd3.png"
-import phdImg4 from "../../assets/phd4.png"
-import phdImg5 from "../../assets/phd5.png"
-import phdImg6 from "../../assets/phd6.png"
+import phdImg1 from "../../assets/phd1.jpg"
+import phdImg2 from "../../assets/phd2.jpg"
+import phdImg3 from "../../assets/phd3.jpg"
+import phdImg4 from "../../assets/phd4.jpg"
+import phdImg5 from "../../assets/phd5.jpg"
+import phdImg6 from "../../assets/phd6.jpg"
 
 const phdPrograms = [
   {
     title: "Ph.D. Programs in Computer Science",
-    text: `Computer Science drives innovation in every field. A Ph.D. in Computer Science opens opportunities to develop groundbreaking technologies while blending theory with real-world applications.`,
+    text: `A Ph.D. in Computer Science equips researchers to create the next generation of intelligent and high-performance systems. 
+    Students explore cutting-edge fields such as artificial intelligence, deep learning, quantum computing, robotics, cybersecurity, 
+    big data infrastructure, and advanced algorithm design. The program blends theoretical foundations with real-world applications, 
+    allowing scholars to contribute to emerging technologies that shape global industries. Doctoral candidates work on high-impact 
+    research projects, publish in top journals, collaborate with leading scientists, and contribute to major technological breakthroughs. 
+    Graduates move into roles as university professors, research scientists, CTOs, AI engineers, and innovators in major tech companies. 
+    This program is ideal for individuals passionate about creating transformative digital solutions and advancing the future of computing.`,
     points: [
       "University of Waterloo, Canada",
       "University of Washington, U.S.A",
@@ -27,9 +33,16 @@ const phdPrograms = [
     img: phdImg1,
     reverse: false,
   },
+
   {
     title: "Ph.D. Programs in Biology",
-    text: `Ph.D. in Biology focuses on advanced research across ecology, molecular biology, neuroscience, and genetics. Graduates become researchers and educators contributing to scientific discovery.`,
+    text: `A Ph.D. in Biology focuses on advanced investigation of living systems across molecular biology, neuroscience, genetics, ecology, 
+    microbiology, and biotechnology. Students conduct laboratory-based research, publish scientific papers, and work alongside distinguished 
+    faculty to solve global biological challenges. Research areas include disease mechanisms, genome editing, drug development, biodiversity 
+    conservation, and environmental sustainability. Doctoral researchers gain expertise in experimental design, scientific communication, 
+    and advanced analytical techniques. Graduates pursue careers as university professors, research scientists, biotech innovators, 
+    pharmaceutical specialists, and environmental consultants. This degree is perfect for those driven by scientific curiosity and a desire 
+    to make meaningful contributions to health, medicine, and environmental science.`,
     points: [
       "University of California, U.S.A",
       "John Hopkins University, U.S.A",
@@ -40,9 +53,15 @@ const phdPrograms = [
     img: phdImg2,
     reverse: true,
   },
+
   {
     title: "Ph.D. Programs in Physics",
-    text: `A Ph.D. in Physics explores quantum mechanics, astrophysics, and particle physics — leading to innovations that shape the scientific world.`,
+    text: `A Ph.D. in Physics enables students to investigate the fundamental laws of the universe through advanced research in quantum mechanics, 
+    astrophysics, condensed matter physics, particle physics, and cosmology. Scholars work with complex simulations, high-energy accelerators, 
+    telescopes, and specialized research laboratories. The program emphasizes deep theoretical understanding merged with experimental inquiry. 
+    Doctoral candidates contribute to groundbreaking discoveries that influence technology, space exploration, and scientific innovation. 
+    Graduates pursue careers in academia, national research labs, aerospace agencies, quantum computing companies, and advanced scientific institutions. 
+    This degree is ideal for students who are passionate about exploring the mysteries of matter, energy, and the universe at its deepest level.`,
     points: [
       "ETH Zurich, Switzerland",
       "MIT, U.S.A",
@@ -53,9 +72,15 @@ const phdPrograms = [
     img: phdImg3,
     reverse: false,
   },
+
   {
     title: "Ph.D. Programs in Management",
-    text: `A Ph.D. in Management prepares you for leadership and academic roles. Learn strategy, innovation, and decision-making through advanced global business research.`,
+    text: `A Ph.D. in Management prepares scholars for leadership in academic research, teaching, and high-level organizational strategy. 
+    Students specialize in areas such as organizational behavior, strategic management, entrepreneurship, international business, 
+    leadership theory, human resources, and innovation management. The program emphasizes analytical thinking, qualitative and quantitative 
+    research methods, and theoretical development. Candidates publish scholarly work, contribute to global business research, and collaborate 
+    with corporate executives and business leaders. Graduates become university professors, consultants, policy advisors, or leaders in 
+    research-driven corporations. This program is ideal for individuals who want to explore how businesses operate and influence the global economy.`,
     points: [
       "University of Pennsylvania, U.S.A",
       "University of Toronto, Canada",
@@ -66,9 +91,15 @@ const phdPrograms = [
     img: phdImg4,
     reverse: true,
   },
+
   {
     title: "Ph.D. Programs in Mechanical Engineering",
-    text: `Specialize in robotics, thermodynamics, and nanotechnology. Lead the future of engineering innovation with advanced research.`,
+    text: `A Ph.D. in Mechanical Engineering allows students to explore cutting-edge innovations in robotics, thermal science, fluid mechanics, 
+    nanotechnology, manufacturing systems, aerospace engineering, and energy sustainability. Scholars design experiments, work with 
+    advanced simulations, and develop engineering solutions with global applications. The program emphasizes creative problem-solving, 
+    innovation, and technical leadership. Graduates become engineering researchers, university faculty, R&D specialists, robotics engineers, 
+    and technical directors in leading industries. This program is ideal for students who want to push technological boundaries and play a 
+    role in shaping the future of engineering.`,
     points: [
       "Stanford University, U.S.A",
       "Georgia Institute of Technology, U.S.A",
@@ -79,9 +110,15 @@ const phdPrograms = [
     img: phdImg5,
     reverse: false,
   },
+
   {
     title: "Ph.D. Programs in Civil Engineering",
-    text: `Civil Engineering Ph.D. programs emphasize infrastructure innovation, sustainability, and public development through high-impact research.`,
+    text: `A Ph.D. in Civil Engineering focuses on advanced research in infrastructure development, structural engineering, transportation systems, 
+    water resources, geotechnical engineering, and sustainable construction. Students work on real-world projects addressing climate change, 
+    urban development, smart cities, and resilient infrastructure. The program builds expertise in design, simulation, materials research, 
+    and project assessment. Graduates become university professors, infrastructure consultants, government researchers, and senior engineers 
+    in global construction and engineering firms. This program is perfect for students who want to improve society by building safer, 
+    sustainable, and future-ready infrastructure.`,
     points: [
       "University of British Columbia, Canada",
       "University of Queensland, Australia",
@@ -93,6 +130,7 @@ const phdPrograms = [
     reverse: true,
   },
 ];
+
 
 const Phd = () => {
   const [showForm, setShowForm] = useState(false);
@@ -147,7 +185,7 @@ const Phd = () => {
             <img
               src={item.img}
               alt={item.title}
-              className="w-full md:w-[45%] rounded-2xl shadow-xl"
+              className="w-full md:w-[40%] h-100 rounded-2xl shadow-xl"
             />
 
             <div className="flex-1">

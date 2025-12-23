@@ -1,44 +1,59 @@
 import React from "react";
-import "./UniversityUK.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import HeroCountry from "../../components/HeroCountry/HeroCountry";
-import ukBanner from "../../assets/bannerImage.jpg"; // your UK banner image
+import ukBanner from "../../assets/Banner5.jpg";
 
 const UniversityUK = () => {
   return (
     <>
       <Navbar />
-      <HeroCountry
-        bannerImage={ukBanner}
-        countryName={'UK'}
-      />
+      <HeroCountry bannerImage={ukBanner} countryName={"UK"} />
 
-      <div className="uk-page container">
-        <h2>Why Study in the UK</h2>
-        <p>
-          One of the most popular study destinations, the UK enjoys a proud tradition of education
-          with universities rooting back to the 12th and 13th centuries. Known for its language,
-          history, culture, and innovation, the UK has an average student retention rate of 82%.
-          With a comprehensive support system for international students, studying in the UK is a
-          life-changing experience.
+      <div className="max-w-5xl mx-auto px-4 md:px-6 py-12 text-gray-700 leading-relaxed font-poppins">
+
+        {/* WHY STUDY IN UK */}
+        <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+          Why Study in the UK
+        </h2>
+
+        <p className="mb-6">
+          One of the most popular study destinations, the UK enjoys a proud
+          tradition of education with universities dating back to the 12th and
+          13th centuries. Known for its language, history, culture, and
+          innovation, the UK has an average student retention rate of 82%.
+          With a comprehensive support system for international students,
+          studying in the UK is a life-changing experience.
         </p>
 
-        <h2>Facts About Studying in the UK</h2>
-        <ul>
+        {/* FACTS */}
+        <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+          Facts About Studying in the UK
+        </h2>
+
+        <ul className="list-disc pl-6 space-y-2 mb-6">
           <li>Choose from over 50,000 courses across 25+ subject areas.</li>
           <li>UK courses are shorter, saving tuition and accommodation costs.</li>
         </ul>
 
-        <h2>Intakes</h2>
-        <p>
-          There are two intakes – <strong>January/February</strong> and
-          <strong>September/October</strong>. Students who miss the September intake can apply for
-          January. September intake offers a larger variety of programs.
+        {/* INTAKES */}
+        <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+          Intakes
+        </h2>
+
+        <p className="mb-6">
+          There are two intakes – <strong>January/February</strong> and{" "}
+          <strong>September/October</strong>. Students who miss the September
+          intake can apply for January. September intake offers the largest
+          variety of programs.
         </p>
 
-        <h2>Top 5 Universities in the UK</h2>
-        <ul className="two-column">
+        {/* TOP 5 UNIVERSITIES */}
+        <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+          Top 5 Universities in the UK
+        </h2>
+
+        <ul className="list-disc pl-6 space-y-2 mb-6">
           <li>University of Cambridge</li>
           <li>University of Oxford</li>
           <li>Imperial College London</li>
@@ -46,30 +61,50 @@ const UniversityUK = () => {
           <li>Lancaster University</li>
         </ul>
 
-        <h2>Top 10 Universities in the UK</h2>
-        <table className="uk-table">
+        {/* TOP 10 TABLE */}
+        <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+          Top 10 Universities in the UK
+        </h2>
+
+        <table className="w-full border-collapse shadow-md rounded-lg overflow-hidden text-left text-[0.95rem] mb-8">
           <thead>
-            <tr>
-              <th>University Name</th>
-              <th>National Ranking</th>
+            <tr className="bg-blue-700 text-white">
+              <th className="py-3 px-4">University Name</th>
+              <th className="py-3 px-4">National Ranking</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>University of Oxford</td><td>1</td></tr>
-            <tr><td>University of Cambridge</td><td>2</td></tr>
-            <tr><td>Imperial College London</td><td>3</td></tr>
-            <tr><td>University College London</td><td>4</td></tr>
-            <tr><td>London School of Economics and Political Science</td><td>5</td></tr>
-            <tr><td>University of Edinburgh</td><td>6</td></tr>
-            <tr><td>King’s College London</td><td>7</td></tr>
-            <tr><td>University of Manchester</td><td>8</td></tr>
-            <tr><td>University of Warwick</td><td>9</td></tr>
-            <tr><td>University of Bristol</td><td>10</td></tr>
+            {[
+              ["University of Oxford", "1"],
+              ["University of Cambridge", "2"],
+              ["Imperial College London", "3"],
+              ["University College London", "4"],
+              ["London School of Economics and Political Science", "5"],
+              ["University of Edinburgh", "6"],
+              ["King’s College London", "7"],
+              ["University of Manchester", "8"],
+              ["University of Warwick", "9"],
+              ["University of Bristol", "10"],
+            ].map(([uni, rank], i) => (
+              <tr
+                key={i}
+                className={`border-b ${
+                  i % 2 === 0 ? "bg-gray-50" : "bg-white"
+                } hover:bg-blue-100 transition`}
+              >
+                <td className="py-3 px-4">{uni}</td>
+                <td className="py-3 px-4">{rank}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
 
-        <h2>Duolingo Accepted Universities</h2>
-        <ul className="two-column">
+        {/* DUOLINGO ACCEPTED */}
+        <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+          Duolingo Accepted Universities
+        </h2>
+
+        <ul className="list-disc pl-6 space-y-2 mb-6">
           <li>Anglia Ruskin University</li>
           <li>Bangor University</li>
           <li>University of Bristol</li>
@@ -82,32 +117,56 @@ const UniversityUK = () => {
           <li>Plymouth University</li>
         </ul>
 
-        <h2>Popular Courses & Duration</h2>
-        <ul>
+        {/* COURSE DURATION */}
+        <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+          Popular Courses & Duration
+        </h2>
+
+        <ul className="list-disc pl-6 space-y-2 mb-6">
           <li><strong>Bachelors:</strong> 3–4 years</li>
           <li><strong>Masters:</strong> 1–2 years</li>
           <li><strong>Doctoral:</strong> 3 years (average)</li>
         </ul>
 
-        <h2>Affordable Universities in the UK</h2>
-        <table className="uk-table">
+        {/* AFFORDABLE UNIVERSITIES */}
+        <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+          Affordable Universities in the UK
+        </h2>
+
+        <table className="w-full border-collapse shadow-md rounded-lg overflow-hidden text-left text-[0.95rem] mb-8">
           <thead>
-            <tr>
-              <th>University</th>
-              <th>Tuition Fee (Approx.)</th>
+            <tr className="bg-blue-700 text-white">
+              <th className="py-3 px-4">University</th>
+              <th className="py-3 px-4">Tuition Fee (Approx.)</th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>Staffordshire University</td><td>£10,500</td></tr>
-            <tr><td>Teesside University</td><td>£10,250</td></tr>
-            <tr><td>Harper Adams University</td><td>£11,000</td></tr>
-            <tr><td>Leeds Trinity University</td><td>£11,000</td></tr>
-            <tr><td>University of Cumbria</td><td>£10,500</td></tr>
+            {[
+              ["Staffordshire University", "£10,500"],
+              ["Teesside University", "£10,250"],
+              ["Harper Adams University", "£11,000"],
+              ["Leeds Trinity University", "£11,000"],
+              ["University of Cumbria", "£10,500"],
+            ].map(([uni, fee], i) => (
+              <tr
+                key={i}
+                className={`border-b ${
+                  i % 2 === 0 ? "bg-gray-50" : "bg-white"
+                } hover:bg-blue-100 transition`}
+              >
+                <td className="py-3 px-4">{uni}</td>
+                <td className="py-3 px-4">{fee}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
 
-        <h2>Why Study in the UK?</h2>
-        <ul>
+        {/* WHY STUDY IN UK */}
+        <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+          Why Study in the UK?
+        </h2>
+
+        <ul className="list-disc pl-6 space-y-2 mb-6">
           <li>Top-ranked universities with global recognition</li>
           <li>Scholarships and grants available</li>
           <li>Multicultural environment</li>
@@ -115,21 +174,38 @@ const UniversityUK = () => {
           <li>Experience the UK's rich heritage and innovation</li>
         </ul>
 
-        <h2>Job Opportunities</h2>
-        <p>
-          The UK boasts the sixth-largest economy in the world with low unemployment (around 4%).
-          Major industries include finance, engineering, healthcare, education, and marketing.
-          International students can gain valuable experience and global exposure.
+        {/* JOB OPPORTUNITIES */}
+        <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+          Job Opportunities
+        </h2>
+
+        <p className="mb-10">
+          The UK boasts the sixth-largest economy in the world with low unemployment
+          (around 4%). Major industries include finance, engineering, healthcare,
+          education, and marketing. International students gain valuable experience
+          and global exposure.
         </p>
 
-        <div className="country-links">
-          <a href="/usa">Study in USA</a>
-          <a href="/canada">Study in Canada</a>
-          <a href="/australia">Study in Australia</a>
-          <a href="/germany">Study in Germany</a>
-          <a href="/france">Study in France</a>
-          <a href="/ireland">Study in Ireland</a>
+        {/* COUNTRY LINKS */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-8">
+          {[
+            ["Study in USA", "/usa"],
+            ["Study in Canada", "/canada"],
+            ["Study in Australia", "/australia"],
+            ["Study in Germany", "/germany"],
+            ["Study in France", "/france"],
+            ["Study in Ireland", "/ireland"],
+          ].map(([label, link], i) => (
+            <a
+              key={i}
+              href={link}
+              className="py-3 px-4 bg-gray-100 hover:bg-blue-600 hover:text-white transition rounded-lg shadow text-blue-700 font-medium text-center"
+            >
+              {label}
+            </a>
+          ))}
         </div>
+
       </div>
 
       <Footer />

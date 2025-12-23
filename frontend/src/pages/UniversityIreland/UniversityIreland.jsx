@@ -2,51 +2,69 @@ import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import HeroCountry from "../../components/HeroCountry/HeroCountry";
-import bannerImage from "../../assets/bannerImage.jpg"
-import "./UniversityIreland.css";
+import bannerImage from "../../assets/Banner9.jpg";
 
 const UniversityIreland = () => {
   return (
-    <div className="ireland-container">
+    <>
       <Navbar />
 
-      <HeroCountry
-        countryName="Ireland"
-        bannerImage={bannerImage}
-      />
+      <HeroCountry countryName="Ireland" bannerImage={bannerImage} />
 
-      <section className="ireland-content">
-        <div className="content-wrapper">
-          <h2>Why Study in <span>Ireland</span></h2>
-          <p>
-            One in ten full-time students in Ireland is an international student, 
-            which explains Irish institutions’ excellence. The Irish government 
+      <div className="max-w-5xl mx-auto px-4 md:px-6 py-12 text-gray-700 leading-relaxed font-poppins">
+
+        {/* WHY STUDY */}
+        <section className="mb-12">
+          <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+            Why Study in Ireland
+          </h2>
+
+          <p className="mb-4">
+            One in ten full-time students in Ireland is an international student,
+            which explains Irish institutions’ excellence. The Irish government
             monitors the quality of education via the National Framework of 
-            Qualifications (NFF). This means irrespective of the university you enroll in, 
-            the quality of education remains uniform.
+            Qualifications (NFQ), ensuring consistent quality across universities.
           </p>
+        </section>
 
-          <h3>Facts about Ireland</h3>
-          <p>
+        {/* FACTS */}
+        <section className="mb-12">
+          <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+            Facts about Ireland
+          </h2>
+
+          <p className="mb-4">
             Ireland ranks among the top 10 countries in Global Peace Indices, 
             making it one of the safest nations in the world. Irish people are 
-            known for being warm, friendly, and welcoming. Festivals like 
-            St. Patrick’s Day, Galway Oyster Festival, and Fleadh Traditional 
-            Music Festival add vibrant culture to student life.
+            warm, friendly, and welcoming. Festivals such as St. Patrick’s Day 
+            and Galway Oyster Festival enhance student life.
           </p>
+        </section>
 
-          <h3>Intakes</h3>
-          <ul>
-            <li>Autumn/Semester 1: Starts early September – December</li>
-            <li>Spring/Semester 2: Starts late January – May</li>
+        {/* INTAKES */}
+        <section className="mb-12">
+          <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+            Intakes
+          </h2>
+
+          <ul className="list-disc pl-6 space-y-2">
+            <li>Autumn / Semester 1: September – December</li>
+            <li>Spring / Semester 2: January – May</li>
           </ul>
+        </section>
 
-          <h3>Top Universities in Ireland</h3>
-          <p>
+        {/* TOP UNIVERSITIES */}
+        <section className="mb-12">
+          <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+            Top Universities in Ireland
+          </h2>
+
+          <p className="mb-4">
             Ireland offers a range of world-class universities, combining 
             historical legacy with modern innovation.
           </p>
-          <ul className="uni-list">
+
+          <ul className="list-disc pl-6 space-y-2">
             <li>Trinity College Dublin</li>
             <li>University College Dublin (UCD)</li>
             <li>University College Cork (UCC)</li>
@@ -55,52 +73,76 @@ const UniversityIreland = () => {
             <li>University of Limerick (UL)</li>
             <li>Technological University Dublin (TU Dublin)</li>
           </ul>
+        </section>
 
-          <h3>Affordable Options</h3>
-          <ul>
+        {/* AFFORDABLE OPTIONS */}
+        <section className="mb-12">
+          <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+            Affordable Options
+          </h2>
+
+          <ul className="list-disc pl-6 space-y-2">
             <li>Dublin Business School</li>
             <li>University of Limerick</li>
             <li>Griffith College Dublin</li>
             <li>National University of Ireland</li>
             <li>Trinity College Dublin</li>
           </ul>
+        </section>
 
-          <h3>Popular Programs</h3>
-          <ul>
+        {/* POPULAR PROGRAMS */}
+        <section className="mb-12">
+          <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+            Popular Programs
+          </h2>
+
+          <ul className="list-disc pl-6 space-y-2">
             <li>Computer Science</li>
             <li>Engineering</li>
             <li>Business & Management</li>
             <li>Arts & Humanities</li>
             <li>Health Sciences</li>
           </ul>
+        </section>
 
-          <h3>Why Choose Ireland?</h3>
-          <ul>
+        {/* WHY CHOOSE IRELAND */}
+        <section className="mb-12">
+          <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+            Why Choose Ireland?
+          </h2>
+
+          <ul className="list-disc pl-6 space-y-2">
             <li>High-Quality Education</li>
-            <li>Career Opportunities</li>
-            <li>Post-Study Work Visa</li>
+            <li>Great Career Opportunities</li>
+            <li>Post-Study Work Visa Options</li>
             <li>Safe and Welcoming Country</li>
             <li>Rich Cultural Heritage</li>
           </ul>
+        </section>
 
-          <h3>Top Employers in Ireland</h3>
-          <p>
-            Ireland hosts top global companies like Apple, Google, Facebook, 
-            Microsoft, and Ryanair — providing world-class career opportunities 
-            for graduates.
+        {/* JOBS */}
+        <section className="mb-12">
+          <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+            Top Employers in Ireland
+          </h2>
+
+          <p className="mb-4">
+            Ireland hosts top global companies such as Apple, Google, Facebook,
+            Microsoft, and Ryanair — giving graduates excellent career opportunities.
           </p>
 
-          <ul className="job-sites">
+          <ul className="list-disc pl-6 space-y-2">
             <li>IrishJobs.ie</li>
             <li>Jobs.ie</li>
             <li>Monster.ie</li>
             <li>RecruitIreland.com</li>
           </ul>
-        </div>
-      </section>
+        </section>
+
+      </div>
 
       <Footer />
-    </div>
+    </>
   );
 };
 

@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,11 +20,9 @@ const Navbar = () => {
   }, []);
 
   const toggleDropdown = (menu) => {
-    // if same dropdown clicked again, close it
-    if (activeDropdown === menu) {
-      setActiveDropdown(null);
-    } else {
-      setActiveDropdown(menu);
+    // Mobile toggle only
+    if (window.innerWidth < 768) {
+      setActiveDropdown(activeDropdown === menu ? null : menu);
     }
   };
 
@@ -30,6 +31,11 @@ const Navbar = () => {
     setActiveDropdown(null);
   };
 
+  const isActive = (path) =>
+    currentPath === path
+      ? "text-blue-700 border-b-2 border-blue-600 pb-1"
+      : "hover:text-blue-600";
+
   return (
     <nav
       className={`fixed w-full z-50 transition-all duration-500 ${
@@ -37,70 +43,97 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-3">
-        <div>
-          <Link to="/" className="flex items-center space-x-3" onClick={closeMenu}>
-            <img
-              src="https://ik.imagekit.io/izqq5ffwt/ChatGPT%20Image%20Nov%204,%202025,%2003_31_41%20PM.png"
-              alt="website logo"
-              className="w-10 h-10 md:w-12 md:h-12 object-contain"
-            />
-            <h1
-              className={`text-1xl font-bold transition-colors duration-300 ${
-                scrolled ? "text-blue-700" : "text-white"
-              }`}
-            >
-              Sindwan Consultancy
-            </h1>
-          </Link>
-        </div>
+
+        {/* Logo */}
+        <Link to="/" className="flex items-center space-x-3" onClick={closeMenu}>
+          <img
+            src="https://ik.imagekit.io/izqq5ffwt/ChatGPT%20Image%20Nov%204,%202025,%2003_31_41%20PM.png"
+            alt="website logo"
+            className="w-10 h-10 md:w-12 md:h-12 object-contain"
+          />
+          <h1
+            className={`text-xl font-bold ${
+              scrolled ? "text-blue-700" : "text-white"
+            }`}
+          >
+            Sindwan Consultancy
+          </h1>
+        </Link>
 
         {/* Desktop Menu */}
         <div
-          className={`hidden md:flex space-x-8 font-medium items-center transition-colors duration-300 ${
+          className={`hidden md:flex space-x-8 font-medium items-center ${
             scrolled ? "text-gray-800" : "text-white"
           }`}
         >
-          <Link to="/" className="hover:text-blue-600 transition-colors" onClick={closeMenu}>
+          <Link
+            to="/"
+            className={`transition-all duration-200 ${isActive("/")}`}
+            onClick={closeMenu}
+          >
             Home
           </Link>
 
           {/* Courses Dropdown */}
-          <div className="relative group">
+          <div
+            className="relative"
+            onMouseEnter={() => setActiveDropdown("courses")}
+            onMouseLeave={() => setActiveDropdown(null)}
+          >
             <button
               onClick={() => toggleDropdown("courses")}
-              className="flex items-center hover:text-blue-600 transition-colors"
+              className={`flex items-center transition-all duration-200 ${
+                activeDropdown === "courses"
+                  ? "text-blue-700 border-b-2 border-blue-600 pb-1"
+                  : "hover:text-blue-600"
+              }`}
             >
               Courses <FaChevronDown className="ml-1 text-sm" />
             </button>
+
             {activeDropdown === "courses" && (
-              <div className="absolute top-8 left-0 bg-white shadow-md rounded-md w-40 py-2 text-gray-700">
-                <Link to="/bachelors" className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600" onClick={closeMenu}>
-                  Bachelors
-                </Link>
-                <Link to="/masters" className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600" onClick={closeMenu}>
-                  Masters
-                </Link>
-                <Link to="/phd" className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600" onClick={closeMenu}>
-                  PhDs
-                </Link>
+              <div className="absolute top-8 left-0 bg-white shadow-lg rounded-md w-44 py-2 text-gray-700 border border-gray-100">
+                {["bachelors", "masters", "phd"].map((item) => (
+                  <Link
+                    key={item}
+                    to={`/${item}`}
+                    onClick={closeMenu}
+                    className="block px-4 py-2 hover:bg-blue-100 hover:text-blue-700 transition-all"
+                  >
+                    {item.charAt(0).toUpperCase() + item.slice(1)}
+                  </Link>
+                ))}
               </div>
             )}
           </div>
 
-          <Link to="/advising" className="hover:text-blue-600 transition-colors" onClick={closeMenu}>
+          <Link
+            to="/advising"
+            className={`transition-all duration-200 ${isActive("/advising")}`}
+            onClick={closeMenu}
+          >
             Advising
           </Link>
 
           {/* Universities Dropdown */}
-          <div className="relative group">
+          <div
+            className="relative"
+            onMouseEnter={() => setActiveDropdown("universities")}
+            onMouseLeave={() => setActiveDropdown(null)}
+          >
             <button
               onClick={() => toggleDropdown("universities")}
-              className="flex items-center hover:text-blue-600 transition-colors"
+              className={`flex items-center transition-all duration-200 ${
+                activeDropdown === "universities"
+                  ? "text-blue-700 border-b-2 border-blue-600 pb-1"
+                  : "hover:text-blue-600"
+              }`}
             >
               Universities <FaChevronDown className="ml-1 text-sm" />
             </button>
+
             {activeDropdown === "universities" && (
-              <div className="absolute top-8 left-0 bg-white shadow-md rounded-md w-56 py-2 text-gray-700">
+              <div className="absolute top-8 left-0 bg-white shadow-lg rounded-md w-56 py-2 text-gray-700 border border-gray-100">
                 {[
                   "USA",
                   "Australia",
@@ -114,9 +147,9 @@ const Navbar = () => {
                 ].map((country) => (
                   <Link
                     key={country}
-                    to={`/${country.toLowerCase().replace(" ", "-")}`}
-                    className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600"
+                    to={`/${country.toLowerCase().replace(/ /g, "-")}`}
                     onClick={closeMenu}
+                    className="block px-4 py-2 hover:bg-blue-100 hover:text-blue-700 transition-all"
                   >
                     {country}
                   </Link>
@@ -126,36 +159,52 @@ const Navbar = () => {
           </div>
 
           {/* Work With Us Dropdown */}
-          <div className="relative group">
+          <div
+            className="relative"
+            onMouseEnter={() => setActiveDropdown("work")}
+            onMouseLeave={() => setActiveDropdown(null)}
+          >
             <button
               onClick={() => toggleDropdown("work")}
-              className="flex items-center hover:text-blue-600 transition-colors"
+              className={`flex items-center transition-all duration-200 ${
+                activeDropdown === "work"
+                  ? "text-blue-700 border-b-2 border-blue-600 pb-1"
+                  : "hover:text-blue-600"
+              }`}
             >
               Work With Us <FaChevronDown className="ml-1 text-sm" />
             </button>
+
             {activeDropdown === "work" && (
-              <div className="absolute top-8 left-0 bg-white shadow-md rounded-md w-48 py-2 text-gray-700">
-                <Link to="/partner" className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600" onClick={closeMenu}>
-                  Become A Partner
-                </Link>
-                <Link to="/mentor" className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600" onClick={closeMenu}>
-                  Become A Mentor
-                </Link>
-                <Link to="/counsellor" className="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600" onClick={closeMenu}>
-                  Become A Counsellor
-                </Link>
+              <div className="absolute top-8 left-0 bg-white shadow-lg rounded-md w-56 py-2 text-gray-700 border border-gray-100">
+                {["partner", "mentor", "counsellor"].map((link) => (
+                  <Link
+                    key={link}
+                    to={`/${link}`}
+                    onClick={closeMenu}
+                    className="block px-4 py-2 hover:bg-blue-100 hover:text-blue-700 transition-all"
+                  >
+                    {`Become A ${
+                      link.charAt(0).toUpperCase() + link.slice(1)
+                    }`}
+                  </Link>
+                ))}
               </div>
             )}
           </div>
 
-          <Link to="/how" className="hover:text-blue-600 transition-colors" onClick={closeMenu}>
+          <Link
+            to="/how"
+            className={`transition-all duration-200 ${isActive("/how")}`}
+            onClick={closeMenu}
+          >
             How It Works
           </Link>
         </div>
 
         {/* Mobile Menu Button */}
         <button
-          className={`md:hidden text-2xl transition-colors duration-300 ${
+          className={`md:hidden text-2xl ${
             scrolled ? "text-blue-700" : "text-white"
           }`}
           onClick={() => setOpen(!open)}
@@ -167,51 +216,58 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {open && (
         <div className="md:hidden bg-white flex flex-col space-y-4 px-6 py-4 font-medium text-gray-800 shadow-lg">
-          <Link to="/" onClick={closeMenu} className="hover:text-blue-600">
+
+          <Link
+            to="/"
+            onClick={closeMenu}
+            className={`transition-all duration-200 ${isActive("/")}`}
+          >
             Home
           </Link>
 
-          {/* Courses Dropdown */}
+          {/* Courses Mobile */}
           <div>
             <button
               onClick={() => toggleDropdown("courses")}
               className="w-full flex justify-between items-center font-semibold hover:text-blue-600"
             >
-              Courses <FaChevronDown className="ml-2" />
+              Courses <FaChevronDown />
             </button>
+
             {activeDropdown === "courses" && (
               <ul className="pl-4 space-y-1 mt-2">
-                <li>
-                  <Link to="/bachelors" onClick={closeMenu} className="hover:text-blue-600">
-                    Bachelors
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/masters" onClick={closeMenu} className="hover:text-blue-600">
-                    Masters
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/phd" onClick={closeMenu} className="hover:text-blue-600">
-                    PhDs
-                  </Link>
-                </li>
+                {["bachelors", "masters", "phd"].map((item) => (
+                  <li key={item}>
+                    <Link
+                      to={`/${item}`}
+                      onClick={closeMenu}
+                      className="hover:text-blue-600"
+                    >
+                      {item.charAt(0).toUpperCase() + item.slice(1)}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             )}
           </div>
 
-          <Link to="/advising" onClick={closeMenu} className="hover:text-blue-600">
+          <Link
+            to="/advising"
+            onClick={closeMenu}
+            className={`transition-all duration-200 ${isActive("/advising")}`}
+          >
             Advising
           </Link>
 
-          {/* Universities Dropdown */}
+          {/* Universities Mobile */}
           <div>
             <button
               onClick={() => toggleDropdown("universities")}
               className="w-full flex justify-between items-center font-semibold hover:text-blue-600"
             >
-              Universities <FaChevronDown className="ml-2" />
+              Universities <FaChevronDown />
             </button>
+
             {activeDropdown === "universities" && (
               <ul className="pl-4 space-y-1 mt-2">
                 {[
@@ -227,7 +283,7 @@ const Navbar = () => {
                 ].map((country) => (
                   <li key={country}>
                     <Link
-                      to={`/${country.toLowerCase().replace(" ", "-")}`}
+                      to={`/${country.toLowerCase().replace(/ /g, "-")}`}
                       onClick={closeMenu}
                       className="hover:text-blue-600"
                     >
@@ -239,14 +295,15 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* Work With Us Dropdown */}
+          {/* Work With Us Mobile */}
           <div>
             <button
               onClick={() => toggleDropdown("work")}
               className="w-full flex justify-between items-center font-semibold hover:text-blue-600"
             >
-              Work With Us <FaChevronDown className="ml-2" />
+              Work With Us <FaChevronDown />
             </button>
+
             {activeDropdown === "work" && (
               <ul className="pl-4 space-y-1 mt-2">
                 <li>
@@ -268,7 +325,11 @@ const Navbar = () => {
             )}
           </div>
 
-          <Link to="/how" onClick={closeMenu} className="hover:text-blue-600">
+          <Link
+            to="/how"
+            onClick={closeMenu}
+            className={`transition-all duration-200 ${isActive("/how")}`}
+          >
             How It Works
           </Link>
         </div>

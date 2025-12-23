@@ -5,37 +5,66 @@ import Footer from "../../components/Footer/Footer";
 import HeroForm from "../../components/HeroForm/HeroForm";
 
 import bannerImg from "../../assets/bannerImage.jpg";
-import AdvisingImage1 from "../../assets/Advising1.png";
-import AdvisingImage2 from "../../assets/Advising2.png";
-import AdvisingImage3 from "../../assets/Advising3.png";
-import AdvisingImage4 from "../../assets/Advising4.png";
+import AdvisingImage1 from "../../assets/Advising1.jpg";
+import AdvisingImage2 from "../../assets/Advising2.jpg";
+import AdvisingImage3 from "../../assets/Advising3.jpg";
+import AdvisingImage4 from "../../assets/Advising4.jpg";
 
 const sections = [
   {
     img: AdvisingImage1,
     tag: "The Right Fit",
     title: "Making the Right List of Universities",
-    text: "We understand your preferences and create the perfect university list using advanced search algorithms, academic evaluation, and financial background assessment.",
+    text: `Choosing the right university can define your entire academic and career journey. 
+    We take the time to understand your profile in detail — your academic background, goals, 
+    preferred countries, career aspirations, and budget considerations. Using intelligent 
+    search tools, global ranking insights, program compatibility analysis, and historical 
+    admission patterns, we create a personalized and strategic university list for you. 
+    Our goal is to match you with institutions where you will thrive academically, 
+    culturally, and financially. You receive a balanced mix of safe, moderate, and competitive 
+    universities tailored specifically to your strengths.`,
   },
+
   {
     img: AdvisingImage2,
     tag: "Your Perspective",
     title: "Pen Down a Compelling Essay",
-    text: "We help you bring your story to life — crafting a powerful essay that reflects your experiences and makes your application shine.",
+    text: `Your essay is the heart of your application — it reflects who you are beyond scores and grades. 
+    We help you craft a compelling, authentic, and impactful essay that highlights your experiences, 
+    achievements, challenges, motivations, and future ambitions. Our expert reviewers refine your 
+    narrative to ensure clarity, emotional depth, and strong storytelling. Whether it's a Statement 
+    of Purpose (SOP), Personal Essay, or Motivation Letter, we polish every detail while keeping your 
+    voice intact. The result is a powerful essay that stands out and captures the attention of 
+    admissions committees.`,
   },
+
   {
     img: AdvisingImage3,
     tag: "Your Roadmap to Success",
     title: "Submit a Flawless Application",
-    text: "We fine-tune every detail of your application, ensuring perfection before submission with feedback and multiple expert reviews.",
+    text: `A strong application is more than just filling forms — it's the perfect blend of accuracy, 
+    presentation, and timely submission. Our team guides you through every requirement, from 
+    documentation to deadlines. We thoroughly review transcripts, résumés, essays, letters of 
+    recommendation, and test scores to ensure they meet each university’s expectations. Multiple 
+    levels of expert review help eliminate errors and improve clarity. We make your application 
+    polished, structured, and professional. With our support, you submit a flawless, competitive 
+    application that highlights your full potential.`,
   },
+
   {
     img: AdvisingImage4,
     tag: "Your Money",
     title: "A Befitting Financial Aid",
-    text: "We evaluate your financial situation and help you explore available aid options to ensure clarity on costs and opportunities.",
+    text: `Finances play a crucial role in studying abroad, and we ensure you explore every available 
+    opportunity. Our advisors assess your financial background and guide you through merit-based 
+    scholarships, need-based aid, assistantships, tuition waivers, and external funding options. 
+    We help you understand cost structures, compare program expenses, and plan an affordable study 
+    pathway. Your investment should bring maximum value — which is why our guidance focuses on smart 
+    financial planning, transparency, and long-term benefits. We ensure you're empowered to make 
+    informed, confident financial decisions.`,
   },
 ];
+
 
 const Advising = () => {
   const [showForm, setShowForm] = useState(false);
@@ -141,14 +170,7 @@ const Advising = () => {
 
               <p className="text-[#003f7f] leading-7 mb-4">{item.text}</p>
 
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={openForm}
-                className="border-2 border-[#00aaff] text-[#00aaff] px-4 py-2 rounded-full font-semibold hover:bg-[#00aaff] hover:text-white transition"
-              >
-                Find Out More
-              </motion.button>
+              
             </div>
           </motion.div>
         ))}

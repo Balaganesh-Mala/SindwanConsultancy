@@ -3,7 +3,6 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import HeroCountry from "../../components/HeroCountry/HeroCountry";
 import australiaBanner from "../../assets/educationBanner.jpg";
-import "./UniversityAustralia.css";
 
 const UniversityAustralia = () => {
   return (
@@ -11,182 +10,294 @@ const UniversityAustralia = () => {
       <Navbar />
       <HeroCountry countryName="Australia" bannerImage={australiaBanner} />
 
-      <div className="australia-container">
-        <section className="section">
-          <h2>Why Study in Australia</h2>
-          <p>
-            Australia promotes innovation, creativity and independent thoughts for students who study at their universities. International students’ study center is designed to keep students informed on the programs and updates from universities in Australia. There are thousands of courses offered throughout the universities in the country. International students who study in Australia universities and colleges find education challenging, fun and rewarding. The country is full of opportunities to live, grow and learn. An increasing number of Indian students are opting for Australia to study abroad for its world-class education, post study work opportunities in Australia and it’s excellent quality of living.
-          </p>
-        </section>
+      <div className="max-w-5xl mx-auto px-4 md:px-6 py-12 text-gray-700 leading-relaxed font-poppins">
 
-        <section className="section">
-          <h2>Facts about Australia</h2>
-          <p>
-            Whatever course you choose to undertake, you’ll be assured of unbeatable academic excellence and support system for international students. All available intakes for Australia.
-          </p>
-        </section>
+        {/* WHY STUDY */}
+        <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+          Why Study in Australia
+        </h2>
 
-        <section className="section">
-          <h2>Intake</h2>
-          <p>
-            Australia generally has two intakes, i.e., February and July, with few Universities offering multiple intakes in September & November. You should start your admission process around six months before the application deadline. Typically most universities have three deadlines during one intake.
-          </p>
-        </section>
+        <p className="mb-4">
+          Australia promotes innovation, creativity and independent thinking for students who study at their universities. With thousands of courses available, international students experience a challenging, fun, and rewarding education.
+        </p>
 
-        <section className="section">
-          <h2>Universities in Australia</h2>
-          <p>
-            Australia is recognized among the world’s top study destinations with eight of its universities in the top universities in the QS world ranking. Studying in Australia’s best universities is a dream come true for many Indian and International students. Universities in Australia offer its students a high class education which is recognized globally. Along with the variety of programs, you can choose to study at Australia’s top universities as well as colleges in Australia.
-          </p>
-          <p>
-            Australia is a home to 43 universities. 37 universities of Australia rank among the top 1000 universities in the world as per Times Higher Education. Australian universities are a blend of academic and teaching excellence and ground breaking research opportunities. Universities in Australia are so distributed that there is at least one main campus of university in each state.
-          </p>
-        </section>
+        <p className="mb-6">
+          Many Indian students choose Australia for its world-class education, post-study work opportunities, and excellent quality of living.
+        </p>
 
-        <section className="section">
-          <h2>Top 10 Universities in Australia</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>University Name</th>
-                <th>National Ranking</th>
+        {/* FACTS */}
+        <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+          Facts About Australia
+        </h2>
+
+        <p className="mb-6">
+          Whatever course you choose, you’ll be assured of exceptional academic standards and support systems. Australia offers multiple academic intakes throughout the year.
+        </p>
+
+        {/* INTAKE */}
+        <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+          Intake
+        </h2>
+
+        <p className="mb-6">
+          Australia has two primary intakes — <strong>February</strong> and <strong>July</strong>. Some universities also offer multiple intakes in <strong>September</strong> and <strong>November</strong>. Students are advised to begin applications at least six months early.
+        </p>
+
+        {/* UNIVERSITIES */}
+        <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+          Universities in Australia
+        </h2>
+
+        <p className="mb-4">
+          Australia is among the top study destinations with eight universities ranked in the QS Top 100. Students can study at globally recognized universities and colleges with high-quality academic and research programs.
+        </p>
+
+        <p className="mb-6">
+          Australia has 43 universities, with 37 among the top 1000 globally. Every state includes at least one major university campus.
+        </p>
+
+        {/* TOP 10 UNIVERSITIES TABLE */}
+        <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+          Top 10 Universities in Australia
+        </h2>
+
+        <table className="w-full border-collapse shadow-md rounded-lg overflow-hidden text-left text-sm mb-10">
+          <thead>
+            <tr className="bg-blue-700 text-white">
+              <th className="py-3 px-4">University Name</th>
+              <th className="py-3 px-4">National Ranking</th>
+            </tr>
+          </thead>
+          <tbody>
+            {[
+              ["University of Melbourne", "1"],
+              ["University of Sydney", "2"],
+              ["Australian National University", "3"],
+              ["University of Queensland", "4"],
+              ["Monash University", "5"],
+              ["University of New South Wales", "6"],
+              ["University of Adelaide", "7"],
+              ["University of Western Australia", "8"],
+              ["University of Technology Sydney", "9"],
+              ["University of Canberra", "10"],
+            ].map(([uni, rank], i) => (
+              <tr
+                key={i}
+                className={`border-b ${
+                  i % 2 === 0 ? "bg-gray-50" : "bg-white"
+                } hover:bg-blue-100 transition`}
+              >
+                <td className="py-3 px-4">{uni}</td>
+                <td className="py-3 px-4">{rank}</td>
               </tr>
-            </thead>
-            <tbody>
-              <tr><td>University of Melbourne</td><td>1</td></tr>
-              <tr><td>University of Sydney</td><td>2</td></tr>
-              <tr><td>Australian National University</td><td>3</td></tr>
-              <tr><td>University of Queensland</td><td>4</td></tr>
-              <tr><td>Monash University</td><td>5</td></tr>
-              <tr><td>University of New South Wales</td><td>6</td></tr>
-              <tr><td>University of Adelaide</td><td>7</td></tr>
-              <tr><td>University of Western Australia</td><td>8</td></tr>
-              <tr><td>University of Technology Sydney</td><td>9</td></tr>
-              <tr><td>University of Canberra</td><td>10</td></tr>
-            </tbody>
-          </table>
-        </section>
+            ))}
+          </tbody>
+        </table>
 
-        <section className="section">
-          <h2>Top Ranked Universities by International Student Percentage</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>University Name</th>
-                <th>Global Rank</th>
-                <th>International Students</th>
+        {/* INTERNATIONAL STUDENTS TABLE */}
+        <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+          Top Ranked Universities by International Student Percentage
+        </h2>
+
+        <table className="w-full border-collapse shadow-md rounded-lg overflow-hidden text-left text-sm mb-10">
+          <thead>
+            <tr className="bg-blue-700 text-white">
+              <th className="py-3 px-4">University Name</th>
+              <th className="py-3 px-4">Global Rank</th>
+              <th className="py-3 px-4">International Students</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {[
+              ["University of Melbourne", "31", "48%"],
+              ["University of Sydney", "51", "43%"],
+              ["Australian National University", "59", "47%"],
+              ["University of Queensland", "62", "38%"],
+              ["Monash University", "64", "43%"],
+              ["University of New South Wales", "67", "44%"],
+              ["University of Adelaide", "118", "29%"],
+              ["University of Western Australia", "139", "29%"],
+              ["University of Technology Sydney", "160", "36%"],
+              ["University of Canberra", "184", "35%"],
+            ].map(([uni, rank, percent], i) => (
+              <tr
+                key={i}
+                className={`border-b ${
+                  i % 2 === 0 ? "bg-gray-50" : "bg-white"
+                } hover:bg-blue-100 transition`}
+              >
+                <td className="py-3 px-4">{uni}</td>
+                <td className="py-3 px-4">{rank}</td>
+                <td className="py-3 px-4">{percent}</td>
               </tr>
-            </thead>
-            <tbody>
-              <tr><td>University of Melbourne</td><td>31</td><td>48%</td></tr>
-              <tr><td>University of Sydney</td><td>51</td><td>43%</td></tr>
-              <tr><td>Australian National University</td><td>59</td><td>47%</td></tr>
-              <tr><td>University of Queensland</td><td>62</td><td>38%</td></tr>
-              <tr><td>Monash University</td><td>64</td><td>43%</td></tr>
-              <tr><td>University of New South Wales</td><td>67</td><td>44%</td></tr>
-              <tr><td>University of Adelaide</td><td>118</td><td>29%</td></tr>
-              <tr><td>University of Western Australia</td><td>139</td><td>29%</td></tr>
-              <tr><td>University of Technology Sydney</td><td>160</td><td>36%</td></tr>
-              <tr><td>University of Canberra</td><td>184</td><td>35%</td></tr>
-            </tbody>
-          </table>
-        </section>
+            ))}
+          </tbody>
+        </table>
 
-        <section className="section">
-          <h2>Top Universities in Australia for MBA</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>University</th>
-                <th>Global Rank</th>
-                <th>National Rank</th>
-                <th>Location</th>
+        {/* MBA UNIVERSITIES */}
+        <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+          Top Universities in Australia for MBA
+        </h2>
+
+        <table className="w-full border-collapse shadow-md rounded-lg overflow-hidden text-left text-sm mb-10">
+          <thead>
+            <tr className="bg-blue-700 text-white">
+              <th className="py-3 px-4">University</th>
+              <th className="py-3 px-4">Global Rank</th>
+              <th className="py-3 px-4">National Rank</th>
+              <th className="py-3 px-4">Location</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {[
+              ["Melbourne Business School", "26", "1", "Melbourne"],
+              ["UNSW", "42", "2", "Sydney"],
+              ["Monash Business School", "90", "3", "Melbourne"],
+              ["University of Queensland", "111–120", "4", "Brisbane"],
+              ["Macquarie Business School", "131–140", "5", "Sydney"],
+            ].map(([uni, gr, nr, loc], i) => (
+              <tr
+                key={i}
+                className={`border-b ${
+                  i % 2 === 0 ? "bg-gray-50" : "bg-white"
+                } hover:bg-blue-100 transition`}
+              >
+                <td className="py-3 px-4">{uni}</td>
+                <td className="py-3 px-4">{gr}</td>
+                <td className="py-3 px-4">{nr}</td>
+                <td className="py-3 px-4">{loc}</td>
               </tr>
-            </thead>
-            <tbody>
-              <tr><td>Melbourne Business School</td><td>26</td><td>1</td><td>Melbourne</td></tr>
-              <tr><td>UNSW</td><td>42</td><td>2</td><td>Sydney</td></tr>
-              <tr><td>Monash Business School</td><td>90</td><td>3</td><td>Melbourne</td></tr>
-              <tr><td>The University of Queensland</td><td>111-120</td><td>4</td><td>Brisbane</td></tr>
-              <tr><td>Macquarie Business School</td><td>131-140</td><td>5</td><td>Sydney</td></tr>
-            </tbody>
-          </table>
-        </section>
+            ))}
+          </tbody>
+        </table>
 
-        <section className="section">
-          <h2>Top Universities in Australia for MS</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>University Name</th>
-                <th>National Ranking</th>
+        {/* MS UNIVERSITIES */}
+        <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+          Top Universities in Australia for MS
+        </h2>
+
+        <table className="w-full border-collapse shadow-md rounded-lg overflow-hidden text-left text-sm mb-10">
+          <thead>
+            <tr className="bg-blue-700 text-white">
+              <th className="py-3 px-4">University Name</th>
+              <th className="py-3 px-4">National Ranking</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {[
+              ["University of Melbourne", "1"],
+              ["University of Sydney", "2"],
+              ["University of Queensland", "3"],
+              ["Monash University", "4"],
+              ["University of New South Wales", "5"],
+              ["Australian National University", "6"],
+              ["University of Adelaide", "7"],
+              ["University of Western Australia", "8"],
+              ["University Technology Sydney", "10"],
+              ["Curtin University", "11"],
+            ].map(([uni, rank], i) => (
+              <tr
+                key={i}
+                className={`border-b ${
+                  i % 2 === 0 ? "bg-gray-50" : "bg-white"
+                } hover:bg-blue-100 transition`}
+              >
+                <td className="py-3 px-4">{uni}</td>
+                <td className="py-3 px-4">{rank}</td>
               </tr>
-            </thead>
-            <tbody>
-              <tr><td>University of Melbourne</td><td>1</td></tr>
-              <tr><td>University of Sydney</td><td>2</td></tr>
-              <tr><td>University of Queensland</td><td>3</td></tr>
-              <tr><td>Monash University</td><td>4</td></tr>
-              <tr><td>University of New South Wales</td><td>5</td></tr>
-              <tr><td>Australian National University</td><td>6</td></tr>
-              <tr><td>University of Adelaide</td><td>7</td></tr>
-              <tr><td>University of Western Australia</td><td>8</td></tr>
-              <tr><td>University Technology Sydney</td><td>10</td></tr>
-              <tr><td>Curtin University</td><td>11</td></tr>
-            </tbody>
-          </table>
-        </section>
+            ))}
+          </tbody>
+        </table>
 
-        <section className="section">
-          <h2>What to Study in Australia</h2>
-          <p>
-            Australia offers three main types of degrees — Bachelor, Master, and Doctoral degrees. Below is a table showing their duration:
-          </p>
-          <table>
-            <thead>
-              <tr>
-                <th>Degree Type</th>
-                <th>Duration</th>
+        {/* WHAT TO STUDY */}
+        <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+          What to Study in Australia
+        </h2>
+
+        <p className="mb-4">
+          Australia offers three main types of degrees — Bachelor, Master, and Doctoral programs.
+        </p>
+
+        <table className="w-full border-collapse shadow-md rounded-lg overflow-hidden text-left text-sm mb-10">
+          <thead>
+            <tr className="bg-blue-700 text-white">
+              <th className="py-3 px-4">Degree Type</th>
+              <th className="py-3 px-4">Duration</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {[
+              ["Bachelors Degree - General", "3 Years"],
+              ["Bachelors Degree - Professional", "4 Years"],
+              ["Bachelor Degree + Honors", "3–4 + 1 Year"],
+              ["Masters by Coursework", "1–2 Years"],
+              ["Masters Extended", "3–4 Years"],
+              ["Masters by Research", "1–2 Years"],
+              ["Doctoral Degree", "3–5 Years"],
+              ["Doctoral Degree (Professional)", "3–5 Years"],
+            ].map(([degree, duration], i) => (
+              <tr
+                key={i}
+                className={`border-b ${
+                  i % 2 === 0 ? "bg-gray-50" : "bg-white"
+                } hover:bg-blue-100 transition`}
+              >
+                <td className="py-3 px-4">{degree}</td>
+                <td className="py-3 px-4">{duration}</td>
               </tr>
-            </thead>
-            <tbody>
-              <tr><td>Bachelors Degree - General</td><td>3 Years</td></tr>
-              <tr><td>Bachelors Degree - Professional</td><td>4 Years</td></tr>
-              <tr><td>Bachelor Degree + Honors</td><td>3 to 4 + 1 Year</td></tr>
-              <tr><td>Masters by Coursework</td><td>1-2 Years</td></tr>
-              <tr><td>Masters Extended</td><td>3-4 Years</td></tr>
-              <tr><td>Masters by Research</td><td>1-2 Years</td></tr>
-              <tr><td>Doctoral Degree</td><td>3-5 Years</td></tr>
-              <tr><td>Doctoral Degree (Professional)</td><td>3-5 Years</td></tr>
-            </tbody>
-          </table>
-        </section>
+            ))}
+          </tbody>
+        </table>
 
-        <section className="section">
-          <h2>Cost of Studying in Australia</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Level of Program</th>
-                <th>Fees (AUD)</th>
+        {/* COST */}
+        <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+          Cost of Studying in Australia
+        </h2>
+
+        <table className="w-full border-collapse shadow-md rounded-lg overflow-hidden text-left text-sm mb-10">
+          <thead>
+            <tr className="bg-blue-700 text-white">
+              <th className="py-3 px-4">Level of Program</th>
+              <th className="py-3 px-4">Fees (AUD)</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {[
+              ["School", "7,800 – 30,000"],
+              ["ELICOS", "300 per week"],
+              ["Undergraduate Program", "20,000 – 40,000"],
+              ["Postgraduate Program", "20,000 – 50,000"],
+              ["Doctoral Programs", "18,000 – 42,000"],
+            ].map(([prog, fee], i) => (
+              <tr
+                key={i}
+                className={`border-b ${
+                  i % 2 === 0 ? "bg-gray-50" : "bg-white"
+                } hover:bg-blue-100 transition`}
+              >
+                <td className="py-3 px-4">{prog}</td>
+                <td className="py-3 px-4">{fee}</td>
               </tr>
-            </thead>
-            <tbody>
-              <tr><td>School</td><td>7,800 - 30,000</td></tr>
-              <tr><td>ELICOS</td><td>300 per week</td></tr>
-              <tr><td>Undergraduate Program</td><td>20,000 - 40,000</td></tr>
-              <tr><td>Postgraduate Program</td><td>20,000 - 50,000</td></tr>
-              <tr><td>Doctoral Programs</td><td>18,000 - 42,000</td></tr>
-            </tbody>
-          </table>
-        </section>
+            ))}
+          </tbody>
+        </table>
 
-        <section className="section">
-          <h2>Jobs in Australia</h2>
-          <p>
-            Australia is a hub of research and technology. The universities offer great research work in arts, humanities, education and sciences. Some crucial inventions and research from Australia include penicillin, IVF, and Wi-Fi. Graduates from Australian universities are valued globally with abundant job opportunities and high-paying positions.
-          </p>
-        </section>
+        {/* JOBS */}
+        <h2 className="text-[1.8rem] font-bold text-[#0037ff] mb-4">
+          Jobs in Australia
+        </h2>
+
+        <p className="mb-6">
+          Australia is a hub of research and technology. Major innovations such as penicillin, IVF, 
+          and Wi-Fi originated here. Graduates from Australian universities are highly valued globally 
+          with excellent job opportunities and rewarding career paths.
+        </p>
+
       </div>
 
       <Footer />

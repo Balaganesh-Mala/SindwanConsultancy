@@ -61,24 +61,13 @@ const HeroCountry = ({ countryName, bannerImage }) => {
 
           <select
             required
-            className="w-full px-4 py-3 rounded-lg bg-white/20 text-white outline-none focus:bg-white/30 transition"
+            className="w-full px-4 py-3 rounded-lg bg-white/20 text-white outline-none focus:bg-black/30 transition"
           >
             <option value="">Select Field of Study</option>
             <option>Engineering</option>
             <option>Business</option>
             <option>Computer Science</option>
             <option>Medical</option>
-          </select>
-
-          <select
-            required
-            className="w-full px-4 py-3 rounded-lg bg-white/20 text-white outline-none focus:bg-white/30 transition"
-          >
-            <option value="">Select Nearest Edmium Office</option>
-            <option>Hyderabad</option>
-            <option>Bangalore</option>
-            <option>Mumbai</option>
-            <option>Delhi</option>
           </select>
 
           <motion.button

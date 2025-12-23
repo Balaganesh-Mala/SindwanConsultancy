@@ -6,6 +6,17 @@ import "./Hero.css";
 
 const Hero = () => {
   const [showForm, setShowForm] = useState(false);
+  const [selectedTool, setSelectedTool] = useState(null);
+
+  const handleOpenForm = (tool) => {
+    setSelectedTool(tool);
+    setShowForm(true);
+  };
+
+  const handleCloseForm = () => {
+    setShowForm(false);
+    setSelectedTool(null);
+  };
 
   return (
     <section id="hero" className="flex items-center justify-center text-center">
@@ -33,11 +44,6 @@ const Hero = () => {
         >
           YOUR SINDWAN CONSULTANCY TO OVERSEAS
         </motion.h2>
-        <img
-          src={AwardImage}
-          alt="Awards"
-          className="w-70 md:w-100 mx-auto mb-6"
-        />
         {!showForm && (
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -50,15 +56,20 @@ const Hero = () => {
       </div>
 
       {showForm && (
-        <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div
-            className="absolute inset-0 bg-black bg-opacity-70 backdrop-blur-md"
-            onClick={() => setShowForm(false)}
-          />
-          <div className="relative z-10 w-full max-w-lg px-4">
-            <HeroForm closeForm={() => setShowForm(false)} />
-          </div>
-        </div>
+        <motion.div
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center z-50"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+        >
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.4 }}
+            className="relative w-full max-w-lg"
+          >
+            <HeroForm selectedTool={selectedTool} closeForm={handleCloseForm} />
+          </motion.div>
+        </motion.div>
       )}
     </section>
   );

@@ -30,7 +30,6 @@ const WhoWeAre = () => {
   return (
     <section className="bg-[#f7f6f2] py-16 text-center px-6 font-poppins">
       <div className="max-w-6xl mx-auto">
-
         {/* Logo animation */}
         <motion.img
           src="https://ik.imagekit.io/izqq5ffwt/ChatGPT%20Image%20Nov%204,%202025,%2003_31_41%20PM.png"
@@ -63,18 +62,6 @@ const WhoWeAre = () => {
           matching algorithm — helping students get the highest amount of
           scholarships and helping universities find special talent.
         </motion.p>
-
-        {/* About Us Button */}
-        <motion.button
-          className="bg-blue-500 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-600 transition mb-12"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.1 }}
-        >
-          ABOUT US
-        </motion.button>
 
         {/* Cards Section */}
         <motion.div

@@ -7,11 +7,11 @@ import counsellor1 from "../../assets/counsellor1.png";
 import counsellor2 from "../../assets/counsellor2.png";
 import counsellor3 from "../../assets/counsellor3.png";
 
-import counsellorCard1 from "../../assets/counsellorCard1.png";
-import counsellorCard2 from "../../assets/counsellorCard2.png";
-import counsellorCard3 from "../../assets/counsellorCard3.png";
-import counsellorCard4 from "../../assets/counsellorCard4.png";
-import counsellorCard5 from "../../assets/counsellorCard5.png";
+import counsellorCard1 from "../../assets/counsellorCard1.jpg";
+import counsellorCard2 from "../../assets/counsellorCard2.jpg";
+import counsellorCard3 from "../../assets/counsellorCard3.jpg";
+import counsellorCard4 from "../../assets/counsellorCard4.jpg";
+import counsellorCard5 from "../../assets/counsellorCard5.jpg";
 
 const whyCards = [
   {

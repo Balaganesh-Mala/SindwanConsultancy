@@ -5,12 +5,12 @@ import Footer from "../../components/Footer/Footer";
 import HeroForm from "../../components/HeroForm/HeroForm";
 
 import bannerImg from "../../assets/Bachelor’s_Degrees_Banner.jpg";
-import businessImg from "../../assets/business_profestional.png";
-import architectureImg from "../../assets/professional2.png";
-import engineeringImg from "../../assets/professional3.png";
-import scienceImg from "../../assets/professional4.png";
-import socialImg from "../../assets/professional5.png";
-import appliedImg from "../../assets/professional6.png";
+import businessImg from "../../assets/bachelors1.jpg";
+import architectureImg from "../../assets/bachelors2.jpg";
+import engineeringImg from "../../assets/bachelors3.jpg";
+import scienceImg from "../../assets/bachelors4.jpg";
+import socialImg from "../../assets/bachelors5.jpg";
+import appliedImg from "../../assets/bachelors6.jpg";
 
 // ✅ Data Sections
 const sections = [
@@ -18,8 +18,18 @@ const sections = [
     title: "Business and Management",
     img: businessImg,
     reverse: false,
-    text:
-      "Business & Management teaches you everything about running a successful organization. Explore Project Management, Business Administration, Finance, Marketing, HR and learn how to manage teams and grow businesses globally.",
+    text: `Business & Management programs prepare you to lead teams, make strategic decisions, and manage organizations effectively. 
+    These degrees focus on real-world business operations such as finance, marketing, economics, HR, entrepreneurship, and corporate strategy. 
+    Students learn how markets function, how companies grow, and how global business environments shape decision-making. 
+    You gain hands-on skills through case studies, industry projects, internships, and leadership development programs. 
+    This field builds strong analytical thinking, problem-solving abilities, and managerial confidence required in top companies worldwide. 
+    Graduates can explore careers in multinational corporations, startups, consulting firms, banking, and government sectors. 
+    With business degrees being globally recognized, you can pursue jobs across continents with strong earning potential. 
+    The program is ideal for students who want leadership roles or aim to build their own startups. 
+    Business schools abroad also offer networking opportunities with global leaders and industry experts. 
+    You learn to manage teams, design business strategies, and navigate international markets with ease. 
+    Business & Management provides a flexible and diverse career foundation for long-term growth. 
+    It remains one of the most sought-after fields for students aiming for global career success.`,
     points: [
       "University of Bristol, United Kingdom",
       "University of Glasgow, United Kingdom",
@@ -29,12 +39,23 @@ const sections = [
       "Dalhousie University, Canada",
     ],
   },
+
   {
     title: "Arts, Design and Architecture",
     img: architectureImg,
     reverse: true,
-    text:
-      "Arts & Design degrees build creative thinkers. Architecture develops professionals to design inspiring spaces. Build visual, conceptual, and technical skills for creative industries.",
+    text: `Arts, Design & Architecture programs nurture creativity, innovation, and visual communication skills. 
+    Students learn how to think creatively, design meaningful experiences, and build visually appealing solutions. 
+    These fields include graphic design, interior design, fine arts, fashion, animation, and user experience design. 
+    Architecture programs teach the art and science of building functional, sustainable, and inspiring spaces. 
+    You gain strong conceptual, technical, and practical skills through studio work, digital tools, and real-world design projects. 
+    Creative industries are rapidly evolving, offering global opportunities in gaming, digital media, advertising, architecture firms, and product design. 
+    Students learn modern design technologies such as AutoCAD, Rhino, Figma, Adobe Suite, and 3D modeling tools. 
+    The programs also build your portfolio, which is essential for global design careers. 
+    You collaborate with industry experts, artists, and architects throughout the program. 
+    Creativity combined with technical mastery opens doors to top creative roles worldwide. 
+    These fields are perfect for students who want to express ideas visually and make an impact through innovative design. 
+    Arts & Architecture degrees ensure a rewarding and dynamic global career path.`,
     points: [
       "University of Victoria, Canada",
       "Simon Fraser University, Canada",
@@ -44,12 +65,23 @@ const sections = [
       "Baylor University, U.S.A",
     ],
   },
+
   {
     title: "Engineering and Technology",
     img: engineeringImg,
     reverse: false,
-    text:
-      "Engineering & Technology equips you to innovate and solve global problems. Learn mechanical, electrical, computing and advanced technologies for real-world industries.",
+    text: `Engineering & Technology programs train students to innovate, design, and develop real-world solutions. 
+    Students explore mechanical, electrical, civil, computer, electronics, and emerging technologies like AI, robotics, and renewable energy. 
+    These programs combine theoretical knowledge with practical experiments, labs, and industry collaborations. 
+    Engineering graduates are problem-solvers capable of building future-ready technologies and infrastructure. 
+    You gain strong analytical, mathematical, and technical skills highly valued across industries. 
+    The demand for engineers is universal, offering excellent career opportunities worldwide. 
+    Universities abroad provide cutting-edge labs, research facilities, and internship placements with global companies. 
+    You learn how to design systems, troubleshoot complex problems, and build sustainable innovations. 
+    Engineering careers span aerospace, automotive, IT, healthcare, construction, energy, and manufacturing sectors. 
+    Students also develop project management and teamwork skills essential for global engineering roles. 
+    This field is ideal for students who enjoy innovation, technology, and building meaningful solutions. 
+    Engineering & Technology degrees open doors to high-paying and impactful global careers.`,
     points: [
       "Queensland University of Technology, Australia",
       "University of Birmingham, UK",
@@ -58,12 +90,23 @@ const sections = [
       "University of Victoria, Canada",
     ],
   },
+
   {
     title: "Natural Sciences",
     img: scienceImg,
     reverse: true,
-    text:
-      "Natural Sciences explore biology, chemistry, physics and geology. Build research skills to innovate in biotechnology and environmental science.",
+    text: `Natural Sciences explore the foundations of life, matter, and the universe through biology, chemistry, physics, and earth sciences. 
+    These programs build strong scientific reasoning, laboratory skills, and research expertise. 
+    Students learn how natural systems work and how scientific principles solve modern challenges. 
+    Fields like biotechnology, genetics, environmental science, and microbiology are rapidly growing worldwide. 
+    Natural Sciences degrees prepare students for careers in healthcare, pharmaceuticals, research, and environmental conservation. 
+    You work on experiments, laboratory projects, and scientific investigations throughout your program. 
+    Universities abroad offer advanced labs, fieldwork opportunities, and access to industry research. 
+    Students learn how to analyze data, conduct experiments, and contribute to scientific discovery. 
+    You also explore global issues like climate change, renewable energy, and environmental protection. 
+    This field is ideal for students passionate about exploring nature, conducting research, and understanding scientific principles. 
+    Natural Sciences open pathways to advanced research, medical careers, and specialized scientific professions. 
+    It is a field that drives global innovation and scientific progress.`,
     points: [
       "University of Saskatchewan, Canada",
       "University of Surrey, UK",
@@ -72,12 +115,23 @@ const sections = [
       "RMIT University, Australia",
     ],
   },
+
   {
     title: "Social Sciences",
     img: socialImg,
     reverse: false,
-    text:
-      "Social Sciences explore human behavior and systems. Learn sociology, psychology, economics, and political science to build impactful careers.",
+    text: `Social Sciences explore how individuals, communities, and societies function and interact. 
+    These programs cover psychology, sociology, economics, political science, anthropology, and international relations. 
+    Students learn how human behavior, culture, and government systems shape the world. 
+    These programs build analytical, communication, and problem-solving skills needed in global careers. 
+    Social Sciences prepare students for roles in policy-making, counselling, development studies, media, NGOs, and government sectors. 
+    You study real-world issues such as mental health, inequality, public policy, and global diplomacy. 
+    Universities abroad provide research labs, fieldwork opportunities, and interaction with experts and policymakers. 
+    Students gain strong ethical understanding and the ability to work with diverse populations. 
+    The field encourages critical thinking, empathy, and leadership skills. 
+    Social Sciences are ideal for students who want to improve society and influence positive change. 
+    Graduates can pursue careers in counselling, public administration, corporate consulting, and community development. 
+    This field offers versatile and impactful career opportunities worldwide.`,
     points: [
       "University of Tasmania, Australia",
       "University of South Australia",
@@ -86,12 +140,23 @@ const sections = [
       "University of Utah, U.S.A",
     ],
   },
+
   {
     title: "Applied Sciences",
     img: appliedImg,
     reverse: true,
-    text:
-      "Applied Sciences focus on practical scientific applications like Forensic Science, Food Science, and Emergency Management.",
+    text: `Applied Sciences focus on using scientific principles to solve practical, real-world problems. 
+    These programs include forensic science, food science, environmental technology, emergency management, and biotechnology. 
+    Students learn hands-on techniques in laboratories, field environments, and industry settings. 
+    Applied Science programs teach practical problem-solving skills used in healthcare, agriculture, safety, and industrial processes. 
+    You gain knowledge in chemical analysis, food safety, evidence examination, and disaster response systems. 
+    Universities abroad provide world-class labs, research centers, and internships with leading organizations. 
+    These degrees prepare students for careers in hospitals, research labs, government agencies, and private industries. 
+    Students also learn advanced instrumentation, laboratory safety, and scientific reporting. 
+    The field is ideal for students who enjoy solving practical challenges through science and experimentation. 
+    Applied Sciences graduates are in high demand due to their technical expertise and hands-on skills. 
+    This field offers versatile and high-impact career options across many industries. 
+    Applied Sciences is perfect for students who want a career rooted in scientific application rather than theory.`,
     points: [
       "University of Tasmania, Australia",
       "Curtin University, Australia",
@@ -128,7 +193,8 @@ const Bachelor = () => {
             Explore Top Bachelor’s Degrees
           </h1>
           <p className="text-base md:text-lg mb-6">
-            Discover your path to a world-class education across leading fields worldwide.
+            Discover your path to a world-class education across leading fields
+            worldwide.
           </p>
 
           <motion.button
@@ -155,22 +221,26 @@ const Bachelor = () => {
               sec.reverse ? "md:flex-row-reverse" : "md:flex-row"
             } gap-10 mb-20 items-center`}
           >
-            <img
-              src={sec.img}
-              alt={sec.title}
-              className="w-full md:w-1/3 rounded-xl shadow-xl"
-            />
+            {/* IMAGE */}
+            <div className="w-full md:w-1/3 h-72 bg-gray-100 rounded-xl shadow-xl overflow-hidden flex items-center justify-center">
+              <img
+                src={sec.img}
+                alt={sec.title}
+                className="w-full h-100 object-cover"
+              />
+            </div>
 
-            <div className="md:w-1/2">
-              <h2 className="text-2xl font-bold text-[#003b88] mb-4">
+            {/* TEXT */}
+            <div className="md:w-[55%]">
+              <h2 className="text-2xl md:text-3xl font-bold text-[#003b88] mb-4">
                 {sec.title}
               </h2>
 
-              <p className="text-gray-700 mb-4 leading-relaxed">{sec.text}</p>
+              <p className="text-gray-700 mb-5 leading-relaxed">{sec.text}</p>
 
-              <ul className="list-disc pl-5 text-blue-700">
+              <ul className="list-disc pl-5 text-blue-700 space-y-1">
                 {sec.points.map((p, idx) => (
-                  <li key={idx} className="mb-1">
+                  <li key={idx} className="text-sm md:text-base">
                     {p}
                   </li>
                 ))}
@@ -195,7 +265,10 @@ const Bachelor = () => {
             transition={{ duration: 0.4 }}
             className="w-full max-w-lg"
           >
-            <HeroForm selectedTool={{ title: "Bachelor Programs" }} closeForm={closeHeroForm} />
+            <HeroForm
+              selectedTool={{ title: "Bachelor Programs" }}
+              closeForm={closeHeroForm}
+            />
           </motion.div>
         </motion.div>
       )}

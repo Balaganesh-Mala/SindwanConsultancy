@@ -30,6 +30,10 @@ import Master from "./pages/Master/Master.jsx";
 import Phd from "./pages/Phd/Phd.jsx";
 
 import RoadmapSection from "./pages/RoadmapSection/RoadmapSection.jsx";
+import EuropeWorkPermit from "./pages/EuropeWorkPermit/EuropeWorkPermit.jsx";
+import UAEWorkPermit from "./pages/UAEWorkPermit/UAEWorkPermit.jsx";
+
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 const Home = () => {
   return (
@@ -48,6 +52,7 @@ const Home = () => {
 const App = () => {
   return (
     <BrowserRouter>
+    <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mentor" element={<Mentor />} />
@@ -69,6 +74,8 @@ const App = () => {
         <Route path="/advising" element={<Advising />} />
         <Route path="/sop-services" element={<SOPServices />} />
         <Route path="/roadmap" element={<RoadmapSection />} />
+        <Route path="/permit" element={<EuropeWorkPermit/>}/>
+        <Route path="/work-permit" element={<UAEWorkPermit/>}/>
       </Routes>
     </BrowserRouter>
   );
