@@ -200,6 +200,13 @@ const Navbar = () => {
           >
             How It Works
           </Link>
+          <Link
+            to="/work-permit"
+            onClick={closeMenu}
+            className={`transition-all duration-200 ${isActive("/work-permit")}`}
+          >
+            Work-permit
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -331,6 +338,13 @@ const Navbar = () => {
             className={`transition-all duration-200 ${isActive("/how")}`}
           >
             How It Works
+          </Link>
+          <Link
+            to="/work-permit"
+            onClick={closeMenu}
+            className={`transition-all duration-200 ${isActive("/work-permit")}`}
+          >
+            Work-permit
           </Link>
         </div>
       )}
